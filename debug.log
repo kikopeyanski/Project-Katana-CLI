@@ -1,0 +1,9 @@
+[0220/135236.463:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: The pipe is being closed. (0xE8)
+[0220/141539.820:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: The pipe is being closed. (0xE8)
+[0220/144805.113:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: The pipe is being closed. (0xE8)
+[0221/143516.651:ERROR:process_info.cc(330)] VirtualQueryEx: Access is denied. (0x5)
+[0221/143516.653:ERROR:process_info.cc(547)] ReadMemoryInfo failed
+[0221/143516.653:ERROR:process_reader_win.cc(233)] ReadMemory at 0x7ff9dde64968 of 12 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0221/143516.654:WARNING:process_snapshot_win.cc(68)] ReadMemory ExceptionInformation failed
+[0221/143516.654:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0221/143516.654:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)
