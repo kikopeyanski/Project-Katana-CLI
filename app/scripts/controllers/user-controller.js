@@ -2,21 +2,20 @@
 
 const handlebars = handlebars || Handlebars;
 
-let homeController = {
+let userController = {
   //request data and views
   get: function (dataService, views) {
     return {
-      getHome(){
-        let courses;
-        dataService.getHomeData()
-          .then((data) => {
-            courses = data;
-            return views.get('home');
-          })
-          .then((template) => {
+      register(){
+        views.get('register')
+          .then(template => {
             let templateFunc = handlebars.compile(template);
-            let html = templateFunc(courses);
+            let html = templateFunc();
             $('.content').html(html);
+          });
+        dataService.register()
+          .then(function () {
+            console.log('register succesfully');
           })
       }
     }

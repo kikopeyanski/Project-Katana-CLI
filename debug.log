@@ -7,3 +7,4 @@
 [0221/143516.654:WARNING:process_snapshot_win.cc(68)] ReadMemory ExceptionInformation failed
 [0221/143516.654:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
 [0221/143516.654:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)
+[0221/163522.820:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: The pipe is being closed. (0xE8)
