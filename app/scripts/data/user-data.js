@@ -2,9 +2,10 @@
 'use strict';
 
 let userData = {
-  register : function () {
-    console.log("register");
-    //TODO: send to server
-    return Promise.resolve();
+  register: function (body) {
+    return requester.postJSON(constants.serverUrl + 'api/auth/register', body);
+  },
+  login: function (body) {
+    return requester.postJSON(constants.serverUrl + 'api/auth/login', body);
   }
 };
