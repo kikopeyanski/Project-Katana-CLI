@@ -38,11 +38,15 @@
         <a class="nav-link" href="#/register">Register</a>
       </li>
       <li>
-        <a class="nav-link" href="#/login">login</a>
+        <a class="nav-link" href="#/login">Login</a>
       </li>
       <li>
-        <a class="nav-link" href="#/logout">login</a>
+        <a class="nav-link" href="#/logout">Logout</a>
       </li>
+      <li>
+        <a class="nav-link" href="#/admin/courses/create">Create Course[ADMIN]</a>
+      </li>
+
     </ul>
     <h3 class="text-muted">Client</h3>
   </div>
@@ -107,6 +111,8 @@
 <!-- build:js scripts/main.js -->
 <script src="scripts/utils/constants.js"></script>
 <script src="scripts/utils/requester.js"></script>
+<script src="scripts/utils/auth.js"></script>
+
 
 <!--views-->
 <script src="scripts/views/index.js"></script>
@@ -115,11 +121,14 @@
 <!--data-->
 <script src="scripts/data/home-data.js"></script>
 <script src="scripts/data/user-data.js"></script>
+<script src="scripts/data/admin-data.js"></script>
+
 <!--enddata-->
 
 <!--controllers-->
 <script src="scripts/controllers/home-controller.js"></script>
 <script src="scripts/controllers/user-controller.js"></script>
+<script src="scripts/controllers/admin-controller.js"></script>
 <!--endcontrollers-->
 
 <script src="scripts/main.js"></script>

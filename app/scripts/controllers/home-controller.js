@@ -18,6 +18,15 @@ let homeController = {
             let html = templateFunc(courses);
             $('.content').html(html);
           })
+          .catch(err => {
+            views.get('authentication-required')
+              .then((template) => {
+                let templateFunc = handlebars.compile(template);
+                let html = templateFunc();
+                console.log(err.responseJSON.message);
+                $('.content').html(html)
+              })
+          })
       }
     }
   }

@@ -50,7 +50,6 @@ let userController = {
             let templateFunc = handlebars.compile(template);
             let html = templateFunc();
             $('.content').html(html);
-            console.log('login reached');
 
             $('#login-submit').on('click', function () {
               let username = $('#username').val();

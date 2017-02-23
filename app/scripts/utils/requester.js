@@ -1,7 +1,6 @@
 /* globals $ Promise */
 
 let requester = {
-
   get(url) {
     let promise = new Promise((resolve, reject) => {
       $.ajax({
@@ -15,8 +14,13 @@ let requester = {
     return promise;
   },
   putJSON(url, body, options = {}) {
+
+    //send request token
+    let token = window.localStorage.getItem('jwt-token');
+
     let promise = new Promise((resolve, reject) => {
       var headers = options.headers || {};
+      headers.authrorization = token;
       $.ajax({
         url,
         headers,
@@ -25,14 +29,22 @@ let requester = {
         data: JSON.stringify(body),
         success(response) {
           resolve(response);
+        },
+        error(err) {
+          reject(err);
         }
       });
     });
     return promise;
   },
   postJSON(url, body, options = {}) {
+
+    //send token to the server
+    let token = window.localStorage.getItem('jwt-token');
+
     let promise = new Promise((resolve, reject) => {
       var headers = options.headers || {};
+      headers.authrorization = token;
 
       $.ajax({
         url,
@@ -42,13 +54,19 @@ let requester = {
         data: JSON.stringify(body),
         success(response) {
           resolve(response);
+        },
+        error(err) {
+          reject(err);
         }
       });
     });
     return promise;
   },
   getJSON(url) {
+    //send token to the server
+
     let token = window.localStorage.getItem('jwt-token');
+
     let promise = new Promise((resolve, reject) => {
       $.ajax({
         url,
@@ -59,6 +77,9 @@ let requester = {
         contentType: "application/json",
         success(response) {
           resolve(response);
+        },
+        error(err) {
+          reject(err);
         }
       });
     });
