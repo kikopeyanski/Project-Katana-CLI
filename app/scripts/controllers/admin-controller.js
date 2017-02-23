@@ -7,10 +7,8 @@ let adminController = {
   get: function (dataService, views) {
     return {
       createCourse(){
-
         authHelper.getCurrentUser()
           .then(user => {
-            console.log(user.roles.indexOf('admin')=== -1);
             if (user.roles.indexOf('admin') != -1) {
               views.get('admin-create-course')
                 .then((template) => {
@@ -18,6 +16,25 @@ let adminController = {
                   let html = templateFunc();
 
                   $('.content').html(html);
+
+                  $('#course-create-btn').on('click', function () {
+                    let courseName = $('#name').val();
+                    let startDate = $('#start-date').val();
+                    let endDate = $('#end-date').val();
+
+                    let course = {
+                      name: courseName,
+                      startDate: startDate,
+                      endDate: endDate
+                    };
+
+
+
+                    dataService.createCourse(course)
+                      .then(msg => {
+                        console.log(msg);
+                      })
+                  })
                 })
             }
             else {
@@ -27,11 +44,13 @@ let adminController = {
                   let html = templateFunc();
 
                   $('.content').html(html);
+
                 })
             }
-          }).catch(err => {
-          console.log(err);
-        });
+          })
+          .catch(err => {
+            console.log(err);
+          });
 
       }
     }
