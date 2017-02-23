@@ -10,7 +10,8 @@ let adminController = {
 
         authHelper.getCurrentUser()
           .then(user => {
-            if (user.roles.indexOf('admin')) {
+            console.log(user.roles.indexOf('admin')=== -1);
+            if (user.roles.indexOf('admin') != -1) {
               views.get('admin-create-course')
                 .then((template) => {
                   let templateFunc = handlebars.compile(template);
