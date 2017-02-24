@@ -10,6 +10,7 @@ let homeController = {
         let courses;
         dataService.getHomeData()
           .then((data) => {
+            console.log(data);
             courses = data;
             return views.get('home');
           })

@@ -3,6 +3,7 @@
 let home = homeController.get(homeData, views);
 let user = userController.get(userData, views);
 let admin = adminController.get(adminData, views);
+let course = courseController.get(courseData, views);
 
 let router = new Navigo(null, false);
 
@@ -36,6 +37,12 @@ router
   })
   .on('/logout', user.logout, {
     after: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
+  .on('/course/:id', course.getCourseById, {
+    before: function (done) {
       user.currentUser();
       done();
     }
