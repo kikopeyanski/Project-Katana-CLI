@@ -6,6 +6,13 @@ let userController = {
     //request data and views
     get: function (dataService, views) {
       return {
+        getUserPanel(params){
+          console.log('user controller reached');
+          dataService.getUserPanel(params)
+            .then(courses =>{
+              console.log(courses);
+            })
+        },
         register(){
           views.get('register')
             .then(template => {
@@ -76,15 +83,32 @@ let userController = {
         currentUser(){
           authHelper.getCurrentUser()
             .then(user => {
-                views.get('nav-login')
-                  .then(template => {
-                    let templateFunc = handlebars.compile(template);
-                    let html = templateFunc(user.username);
-                    $('.nav').html(html);
+                //load admin panel
+                if (user.roles.indexOf('admin') != -1) {
+                  views.get('nav-login')
+                    .then(template => {
+                      let templateFunc = handlebars.compile(template);
+                      let html = templateFunc(user);
+                      $('.nav').html(html);
+
+                      console.log('admin');
+
+                      return Promise.resolve()
+                    })
+                }
+                //load regular user panel
+                else {
+                  views.get('nav-login')
+                    .then(template => {
+                      let templateFunc = handlebars.compile(template);
+                      let html = templateFunc(user);
+                      $('.nav').html(html);
 
 
-                    return Promise.resolve()
-                  })
+                      console.log('not admin');
+                      return Promise.resolve()
+                    })
+                }
               }
             )
             .catch(

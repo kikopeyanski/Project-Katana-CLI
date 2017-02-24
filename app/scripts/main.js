@@ -16,6 +16,12 @@ router
       done();
     }
   })
+  .on('/user/:username', user.getUserPanel, {
+    before: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
   .on('/register', user.register, {
     before: function (done) {
       user.currentUser();
