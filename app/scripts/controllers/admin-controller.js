@@ -49,7 +49,7 @@ let adminController = {
             }
           })
           .catch(err => {
-            console.log(err);
+            console.log(err.responseText);
           });
 
       }

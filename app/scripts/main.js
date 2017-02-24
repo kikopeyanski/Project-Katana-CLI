@@ -2,15 +2,42 @@
 'use strict';
 let home = homeController.get(homeData, views);
 let user = userController.get(userData, views);
-let admin = adminController.get(adminData,views);
+let admin = adminController.get(adminData, views);
 
 let router = new Navigo(null, false);
 
+router.use
+
 //Start of Routes
 router
-  .on('/',home.getHome)
-  .on('/register', user.register)
-  .on('/login', user.login)
-  .on('/logout', user.logout)
-  .on('/admin/courses/create', admin.createCourse)
+  .on(home.getHome, {
+    before: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
+  .on('/register', user.register, {
+    before: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
+  .on('/login', user.login, {
+    before: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
+  .on('/logout', user.logout, {
+    after: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
+  .on('/admin/courses/create', admin.createCourse, {
+    before: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
   .resolve();
