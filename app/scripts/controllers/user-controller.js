@@ -9,8 +9,14 @@ let userController = {
         getUserPanel(params){
           console.log('user controller reached');
           dataService.getUserPanel(params)
-            .then(courses =>{
-              console.log(courses);
+            .then(courses => {
+              views.get('user-courses')
+                .then(template => {
+                  let templateFunc = handlebars.compile(template);
+                  let html = templateFunc(courses);
+
+                  $('.content').html(html);
+                })
             })
         },
         register(){
