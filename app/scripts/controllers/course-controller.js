@@ -7,10 +7,28 @@ let courseController = {
     return {
       getCourseById(params){
         dataService.getCourseById(params.id)
-          .then(msg => {
-            console.log(msg);
+          .then(course => {
+            views.get('course-info')
+              .then((template) => {
+                let templateFunc = handlebars.compile(template);
+                let html = templateFunc(course);
+
+                $('.content').html(html);
+
+
+                console.log(course);
+              })
+          })
+      },
+      getCourseHomework(params)
+      {
+        console.log('user controller reached');
+        dataService.getCourseHomework(params.id)
+          .then(homework => {
+            console.log('returning from data' + homework);
           })
       }
+      ,
     }
   }
 };

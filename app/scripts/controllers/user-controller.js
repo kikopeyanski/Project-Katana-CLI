@@ -7,7 +7,6 @@ let userController = {
     get: function (dataService, views) {
       return {
         getUserPanel(params){
-          console.log('user controller reached');
           dataService.getUserPanel(params)
             .then(courses => {
               views.get('user-courses')

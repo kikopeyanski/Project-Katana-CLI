@@ -3,6 +3,12 @@
 
 let courseData = {
   getCourseById: function (id) {
-    return Promise.resolve('reached course data' + ' ' + id);
+    //TODO Change
+    return requester.getJSON(constants.serverUrl + 'courses/course/' + id);
+    //Promise.resolve('reached course data' + ' ' + id);
+  },
+  getCourseHomework: function (id) {
+    //TODO Change
+    return Promise.resolve('reached course homework' + id);
   }
 };

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-10">
+    <h1> Course Name: {{this.name}}</h1>
+  </div>
+  <div class="col-md-6">
+    Course start date:
+    {{this.startDate}}
+  </div>
+  <div class="col-md-6">
+    Course end date:
+    {{this.endDate}}
+  </div>
+  {{#each this.homework}}
+    <div class="col-md-4"><h2>
+      {{name}}
+    </h2>
+    </div>
+  {{/each}}
+
+</div>
