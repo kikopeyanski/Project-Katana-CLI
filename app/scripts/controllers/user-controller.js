@@ -61,6 +61,7 @@ let userController = {
               $('.content').html(html);
 
               $('#login-submit').on('click', function () {
+                console.log('here');
                 let username = $('#username').val();
                 let password = $('#password').val();
 
@@ -71,7 +72,6 @@ let userController = {
 
                 dataService.login(userData)
                   .then(response => {
-                    console.log(response.message);
                     window.localStorage.setItem('jwt-token', response.token);
                     window.location.replace('/#');
                   })
@@ -88,40 +88,25 @@ let userController = {
         currentUser(){
           authHelper.getCurrentUser()
             .then(user => {
-                //load admin panel
-                if (user.roles.indexOf('admin') != -1) {
-                  views.get('nav-login')
-                    .then(template => {
-                      let templateFunc = handlebars.compile(template);
-                      let html = templateFunc(user);
-                      $('.nav').html(html);
+                user.isAdmin = (user.roles.indexOf('admin') > -1);
 
-                      console.log('admin');
+                views.get('nav-home')
+                  .then(template => {
+                    let templateFunc = handlebars.compile(template);
+                    let html = templateFunc(user);
+                    $('.header').html(html);
 
-                      return Promise.resolve()
-                    })
-                }
-                //load regular user panel
-                else {
-                  views.get('nav-login')
-                    .then(template => {
-                      let templateFunc = handlebars.compile(template);
-                      let html = templateFunc(user);
-                      $('.nav').html(html);
-
-
-                      console.log('not admin');
-                      return Promise.resolve()
-                    })
-                }
+                    return Promise.resolve()
+                  })
               }
             )
             .catch(
               views.get('nav-home')
                 .then(template => {
+
                   let templateFunc = handlebars.compile(template);
                   let html = templateFunc();
-                  $('.nav').html(html);
+                  $('.header').html(html);
 
                   return Promise.resolve()
                 })

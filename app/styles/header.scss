@@ -1,0 +1,76 @@
+.header {
+  $border-radius: 4px;
+  $border-color: #ebeae9;
+  $navbar-item-height: 70px;
+
+  min-height: 70px;
+
+  border: 1px solid $border-color;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+
+  nav {
+    padding: 0;
+
+    .project-logo {
+      margin-right: 10px;
+      width: auto;
+      height: $navbar-item-height;
+      max-height: 100%;
+      max-width: 200px;
+      padding: 0;
+      background-color: #e9e9e9;
+    }
+
+    .user-panel {
+      .user-username {
+        color: dimgray;
+        font-weight: bold;
+      }
+
+      button {
+        border-left: 1px solid $border-color;
+        height: $navbar-item-height;
+        background-color: transparent;
+      }
+      .dropdown-menu {
+        color: orangered;
+        left: auto;
+        right: 0;
+      }
+      &.show {
+        button {
+          background-color: orangered;
+        }
+
+        .user-username {
+          color: white;
+        }
+
+      }
+
+    }
+    .search-and-notifications {
+      margin-left: 0;
+      .icon {
+        margin: auto 0 auto 20px;
+        height: 20px;
+      }
+    }
+
+  }
+
+  .nav {
+    height: $navbar-item-height;
+    margin: auto;
+    li {
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+@media screen and (max-width: 47em) {
+  .project-logo-wrapper{
+    display: none;
+  }
+}
+

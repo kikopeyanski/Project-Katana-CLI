@@ -11,10 +11,19 @@
 
 /* Space out content a bit */
 body {
+  margin-top: 60px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  background-image: url("../images/Background.png");
 }
 
+.container{
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: white;
+
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -25,7 +34,6 @@ body {
 
 /* Custom page header */
 .header {
-  padding-bottom: 1rem;
   border-bottom: .05rem solid #e5e5e5;
 }
 
@@ -73,6 +81,28 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 2rem;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 47em) {
+  body{
+    margin: 0;
+    padding: 0;
+  }
   /* Remove the padding we set earlier */
   .header,
   .marketing,

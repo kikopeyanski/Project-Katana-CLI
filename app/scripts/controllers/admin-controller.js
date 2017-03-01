@@ -68,8 +68,6 @@ let adminController = {
                         $(fieldID).remove();
                       });
                     });
-
-
                   });
                 })
             }
