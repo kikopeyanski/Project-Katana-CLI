@@ -10,7 +10,6 @@ let homeController = {
         let courses;
         dataService.getHomeData()
           .then((data) => {
-            console.log(data);
             courses = data;
             return views.get('home');
           })
@@ -24,7 +23,6 @@ let homeController = {
               .then((template) => {
                 let templateFunc = handlebars.compile(template);
                 let html = templateFunc();
-                console.log(err.responseJSON.message);
                 $('.content').html(html)
               })
           })

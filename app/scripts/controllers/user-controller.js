@@ -11,6 +11,7 @@ let userController = {
             .then(courses => {
               views.get('user-courses')
                 .then(template => {
+                  console.log(courses);
                   let templateFunc = handlebars.compile(template);
                   let html = templateFunc(courses);
 
@@ -90,14 +91,23 @@ let userController = {
             .then(user => {
                 user.isAdmin = (user.roles.indexOf('admin') > -1);
 
+                //get navbar for current user
                 views.get('nav-home')
                   .then(template => {
                     let templateFunc = handlebars.compile(template);
                     let html = templateFunc(user);
                     $('.header').html(html);
+                  });
+                //get sidebar for currentuser
+                views.get('side-home')
+                  .then(template => {
+                    let templateFunc = handlebars.compile(template);
+                    let html = templateFunc(user);
+                    $('.sidebar').html(html);
+                  });
 
-                    return Promise.resolve()
-                  })
+                return Promise.resolve(user.username)
+
               }
             )
             .catch(

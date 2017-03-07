@@ -1,41 +1,44 @@
-<nav class="navbar navbar-toggleable navbar-default">
-  <div class="p-0 project-logo-wrapper">
-    <img class="project-logo" src="images/Katana-Logo.png">
-  </div>
-  <div class="search-and-notifications mr-auto">
+<div class="navbar-logo-wrapper p-0 ">
+  <img class="navbar-logo" src="images/Katana-Logo.png">
+</div>
+
+<div class="navbar-search-wrapper">
+  <div class="navbar-search">
     <img class="icon" id="bell-icon" src="images/bell.png">
     <img class="icon" id="zoom-icon" src="images/zoom.png">
   </div>
-  <div class="user-panel">
-    <div class="dropdown-menu">
-      {{#if this}}
-        <a class="dropdown-item" href="#">Home</a>
-        {{#if this.isAdmin}}
-          <a class="dropdown-item" href="#/admin/courses/create">Create Course[ADMIN]</a>
-        {{/if}}
-        <a class="dropdown-item" href="#/logout">Logout</a>
+</div>
 
-      {{else}}
-        <a class="dropdown-item" href="#/register">Register</a>
-        <a class="dropdown-item" href="#/login">Login</a>
-
-      {{/if}}
-    </div>
-
+<div class="navbar-user-panel">
+  <div class="dropdown-menu">
     {{#if this}}
-      <button type="button" class="btn float-right dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+      <a class="dropdown-item" href="#">Home</a>
+      {{#if this.isAdmin}}
+        <a class="dropdown-item" href="#/admin/courses/create">Create Course[ADMIN]</a>
+      {{/if}}
+      <a class="dropdown-item" href="#/logout">Logout</a>
+
+    {{else}}
+      <a class="dropdown-item" href="#/register">Register</a>
+      <a class="dropdown-item" href="#/login">Login</a>
+
+    {{/if}}
+  </div>
+
+  {{#if this}}
+    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
         <span class="user-username">
           <img src="images/user-image.png" alt="">
           {{this.username}}
         </span>
-      </button>
+    </button>
 
-    {{else}}
-      <button type="button" class="btn  float-right dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-        <span>login</span>
-      </button>
-    {{/if}}
-  </div>
-</nav>
+  {{else}}
+    <button type="button" class="btn  float-right dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+      <span>login</span>
+    </button>
+  {{/if}}
+</div>
+

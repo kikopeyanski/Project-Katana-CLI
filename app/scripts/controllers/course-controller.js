@@ -6,8 +6,12 @@ let courseController = {
   get: function (dataService, views) {
     return {
       getCourseById(params){
-        dataService.getCourseById(params.id)
+
+        let id = params.id;
+
+        dataService.getCourseById(id)
           .then(course => {
+            console.log(course);
             views.get('course-info')
               .then((template) => {
                 let templateFunc = handlebars.compile(template);
@@ -15,14 +19,25 @@ let courseController = {
 
                 $('.content').html(html);
 
-
-                console.log(course);
+                $('.sign-course').on('click', function () {
+                  authHelper.getCurrentUser()
+                    .then(user => {
+                      console.log(user);
+                      let username = user.username;
+                      let body = {
+                        id: id
+                      };
+                      dataService.addCourseToUser(username, body)
+                        .then(
+                          console.log('course added to user successfully')
+                        )
+                    })
+                })
               })
           })
       },
       getCourseHomework(params)
       {
-        console.log('user controller reached');
         dataService.getCourseHomework(params.id)
           .then(homework => {
             console.log('returning from data' + homework);

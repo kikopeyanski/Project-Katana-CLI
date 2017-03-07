@@ -1,0 +1,41 @@
+$sidebar-default-width: 108px;
+$sidebar-button-default-height: 100px;
+$sidebar-text-color: #6c747a;
+$sidebar-default-color: #f4f4f4;
+
+.sidebar {
+  background-color: $sidebar-default-color;
+  width: $sidebar-default-width;
+  max-width: $sidebar-default-width;
+  margin: 0;
+  overflow: visible;
+  color: $sidebar-text-color;
+
+  button {
+    width: 100%;
+    height: $sidebar-button-default-height;
+    background-color: transparent;
+    border: none;
+    position: relative;
+
+    &.selected {
+      background-color: #f58029;
+      color: white;
+
+      &::after {
+        content: url("../images/arrow.png");
+        position: absolute;
+        right: -9px;
+      }
+    }
+  }
+
+  .sidebar-bottom-section{
+    position: absolute;
+    bottom: 0;
+
+    button{
+      border-bottom: 1px solid lightgray;
+    }
+  }
+}

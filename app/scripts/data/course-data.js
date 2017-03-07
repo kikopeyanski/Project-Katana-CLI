@@ -10,5 +10,8 @@ let courseData = {
   getCourseHomework: function (id) {
     //TODO Change
     return Promise.resolve('reached course homework' + id);
+  },
+  addCourseToUser: function (username, body) {
+    return requester.postJSON(constants.serverUrl + 'api/users/user/' + username + '/courses', body)
   }
 };
