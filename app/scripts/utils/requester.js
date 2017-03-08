@@ -62,6 +62,33 @@ let requester = {
     });
     return promise;
   },
+  postWithFile(url, data){
+    //send token to the server
+    let token = window.localStorage.getItem('jwt-token');
+
+    let promise = new Promise((resolve, reject) => {
+      $.ajax({
+        url,
+        headers: {
+          'authorization': token
+        },
+        method: "POST",
+        data,
+        contentType: false,
+        async: true,
+        cache: false,
+        enctype: "multipart/form-data",
+        processData: false,
+        success(response) {
+          resolve(response);
+        },
+        error(err) {
+          reject(err);
+        }
+      });
+    });
+    return promise;
+  },
   getJSON(url) {
     //send token to the server
 

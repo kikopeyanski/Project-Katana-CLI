@@ -2,10 +2,11 @@
 'use strict';
 
 let courseData = {
+  getAllCourses: function () {
+    return requester.getJSON(constants.serverUrl + 'courses/all')
+  },
   getCourseById: function (id) {
-    //TODO Change
     return requester.getJSON(constants.serverUrl + 'courses/course/' + id);
-    //Promise.resolve('reached course data' + ' ' + id);
   },
   getCourseHomework: function (id) {
     //TODO Change

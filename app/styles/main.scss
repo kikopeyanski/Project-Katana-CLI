@@ -63,7 +63,8 @@ body {
 }
 
 .content {
-  flex: 2 80%;
+  flex: 80%;
+  align-items: stretch;
   padding: 20px;
   background-color:  white;
 }

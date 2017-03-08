@@ -8,15 +8,18 @@ let homeController = {
     return {
       getHome(){
         let courses;
-        dataService.getHomeData()
-          .then((data) => {
-            courses = data;
-            return views.get('home');
-          })
-          .then((template) => {
-            let templateFunc = handlebars.compile(template);
-            let html = templateFunc(courses);
-            $('.content').html(html);
+        authHelper.getCurrentUser()
+          .then(user => {
+            dataService.getUserPanel(user.username)
+              .then(courses => {
+                views.get('user-courses')
+                  .then(template => {
+                    let templateFunc = handlebars.compile(template);
+                    let html = templateFunc(courses);
+
+                    $('.content').html(html);
+                  })
+              })
           })
           .catch(err => {
             views.get('authentication-required')

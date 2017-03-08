@@ -5,6 +5,16 @@ const handlebars = handlebars || Handlebars;
 let courseController = {
   get: function (dataService, views) {
     return {
+      getAllCourses(){
+        dataService.getAllCourses()
+          .then(courses =>{
+            views.get('home')
+              .then((template)=>{
+                let templateFunc = handlebars.compile(template);
+                let html = templateFunc(courses);
+              })
+          })
+      },
       getCourseById(params){
 
         let id = params.id;
@@ -22,7 +32,6 @@ let courseController = {
                 $('.sign-course').on('click', function () {
                   authHelper.getCurrentUser()
                     .then(user => {
-                      console.log(user);
                       let username = user.username;
                       let body = {
                         id: id
@@ -43,7 +52,6 @@ let courseController = {
             console.log('returning from data' + homework);
           })
       }
-      ,
     }
   }
 };

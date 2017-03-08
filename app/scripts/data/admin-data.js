@@ -2,7 +2,7 @@
 'use strict';
 
 let adminData = {
-  createCourse: function (body) {
-    return requester.postJSON(constants.serverUrl + 'courses/upload', body);
+  createCourse: function (data) {
+    return requester.postWithFile(constants.serverUrl + 'courses/upload', data);
   }
 };

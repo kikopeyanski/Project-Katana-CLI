@@ -41,6 +41,12 @@ router
       done();
     }
   })
+  .on('/courses/all', course.getAllCourses, {
+    before: function (done) {
+      user.currentUser();
+      done();
+    }
+  })
   .on('/course/:id/homework', course.getCourseHomework, {
     before: function (done) {
       user.currentUser();

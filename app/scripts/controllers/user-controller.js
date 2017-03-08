@@ -7,15 +7,17 @@ let userController = {
     get: function (dataService, views) {
       return {
         getUserPanel(params){
-          dataService.getUserPanel(params)
-            .then(courses => {
-              views.get('user-courses')
-                .then(template => {
-                  console.log(courses);
-                  let templateFunc = handlebars.compile(template);
-                  let html = templateFunc(courses);
+          authHelper.getCurrentUser()
+            .then(user => {
+              dataService.getUserPanel(params, user.username)
+                .then(courses => {
+                  views.get('user-courses')
+                    .then(template => {
+                      let templateFunc = handlebars.compile(template);
+                      let html = templateFunc(courses);
 
-                  $('.content').html(html);
+                      $('.content').html(html);
+                    })
                 })
             })
         },
@@ -26,30 +28,23 @@ let userController = {
               let html = templateFunc();
               $('.content').html(html);
 
-              $('#register-submit').on('click', function () {
+              $('#user-create-user').submit(function (ev) {
+                ev.preventDefault();
 
-                let username = $('#username').val();
-                let email = $('#email').val();
-                let password = $('#password').val();
-                let passwordConfirm = $('#confirm-password').val();
+                let data = new FormData($(this)[0]);
 
-                let userData = {
-                  username: username,
-                  email: email,
-                  password: password,
-                  confirmedPassword: passwordConfirm
-                };
-
-                dataService.register(userData)
+                dataService.register(data)
                   .then(function () {
                     console.log('successfully registered');
                   })
                   .then(
-                    dataService.login(userData)
+                    dataService.login(data)
                   )
                   .catch(function () {
                     console.log('error registering')
-                  })
+                  });
+
+                return false;
               })
             });
           return Promise.resolve();
@@ -104,6 +99,7 @@ let userController = {
                     let templateFunc = handlebars.compile(template);
                     let html = templateFunc(user);
                     $('.sidebar').html(html);
+
                   });
 
                 return Promise.resolve(user.username)
