@@ -7,12 +7,12 @@ let homeController = {
   get: function (dataService, views) {
     return {
       getHome(){
-        let courses;
         authHelper.getCurrentUser()
           .then(user => {
+            user.isAdmin = user.roles.indexOf('admin') != -1;
             dataService.getUserPanel(user.username)
               .then(courses => {
-                views.get('user-courses')
+                views.get('home')
                   .then(template => {
                     let templateFunc = handlebars.compile(template);
                     let html = templateFunc(courses);

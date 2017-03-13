@@ -1,0 +1,10 @@
+<div class="content-courses-wrapper">
+  <div class="content-courses">
+    {{#each this}}
+      <div class="course">
+        <img src="http://localhost:1337/image/{{image}}" alt="">
+        <a href="#/course/{{_id}}">{{name}}</a>
+      </div>
+    {{/each}}
+  </div>
+</div>

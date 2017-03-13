@@ -12,7 +12,7 @@
 <div class="navbar-user-panel">
   <div class="dropdown-menu">
     {{#if this}}
-      <a class="dropdown-item" href="#">Home</a>
+      <a class="dropdown-item" href="#/user-panel">Home</a>
       {{#if this.isAdmin}}
         <a class="dropdown-item" href="#/admin/courses/create">Create Course[ADMIN]</a>
       {{/if}}
@@ -37,7 +37,7 @@
   {{else}}
     <button type="button" class="btn  float-right dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-      <span>login</span>
+      <span>Hello Guest, Log in for more</span>
     </button>
   {{/if}}
 </div>

@@ -43,7 +43,7 @@ let requester = {
     let token = window.localStorage.getItem('jwt-token');
 
     let promise = new Promise((resolve, reject) => {
-      var headers = options.headers || {};
+      let headers = options.headers || {};
       headers.authrorization = token;
 
       $.ajax({

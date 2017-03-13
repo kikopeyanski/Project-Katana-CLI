@@ -7,30 +7,29 @@ let courseController = {
     return {
       getAllCourses(){
         dataService.getAllCourses()
-          .then(courses =>{
-            views.get('home')
-              .then((template)=>{
+          .then(response => {
+            views.get('courses-all')
+              .then((template) => {
                 let templateFunc = handlebars.compile(template);
-                let html = templateFunc(courses);
+                let html = templateFunc(response.result);
+
+                $('.content').html(html);
               })
           })
       },
       getCourseById(params){
-
         let id = params.id;
-
         dataService.getCourseById(id)
-          .then(course => {
-            console.log(course);
+          .then(response => {
             views.get('course-info')
               .then((template) => {
                 let templateFunc = handlebars.compile(template);
-                let html = templateFunc(course);
+                let html = templateFunc(response.result);
 
                 $('.content').html(html);
 
                 $('.sign-course').on('click', function () {
-                  authHelper.getCurrentUser()
+                  authHelper.authenticateUser()
                     .then(user => {
                       let username = user.username;
                       let body = {
@@ -38,8 +37,11 @@ let courseController = {
                       };
                       dataService.addCourseToUser(username, body)
                         .then(
-                          console.log('course added to user successfully')
+                          console.log('course '+response.result.course.name +' added to user '+ username +' successfully')
                         )
+                        .catch(err =>{
+                          console.log(err);
+                        })
                     })
                 })
               })

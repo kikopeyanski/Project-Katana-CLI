@@ -7,7 +7,7 @@ let adminController = {
   get: function (dataService, views) {
     return {
       createCourse(){
-        authHelper.getCurrentUser()
+        authHelper.authenticateUser()
           .then(user => {
             if (user.roles.indexOf('admin') != -1) {
               views.get('admin-create-course')
