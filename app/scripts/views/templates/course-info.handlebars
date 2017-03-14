@@ -20,4 +20,25 @@
   {{else}}
     <button class="btn btn-success sign-course">Sign in for this course</button>
   {{/if}}
+  <div class="course-add-lecture row">
+    <label>Lecture Name
+      <input type="text" class="lecture-name"/>
+    </label>
+    <label>Lecture Date
+      <input type="date" class="lecture-date">
+    </label>
+    <label>Lecture start hour
+      <input type="time" class="lecture-startHour"/>
+    </label>
+    <label>Lecture end hour
+      <input type="time" class="lecture-endHour"/>
+    </label>
+    <input type="button" class="lecture-create-lecture-btn" value="Create Lecture">
+    <label >Homework
+      <input name="hw" type="checkbox" class="lecture-homework">
+    </label>
+    <label class="homework" style="display: none;">
+      <input type="date" class="lecture-homework-deadline">
+    </label>
+  </div>
 </div>

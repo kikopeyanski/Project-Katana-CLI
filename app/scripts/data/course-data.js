@@ -14,5 +14,8 @@ let courseData = {
   },
   addCourseToUser: function (username, body) {
     return requester.postJSON(constants.serverUrl + 'api/users/user/' + username + '/courses', body)
+  },
+  addLectureToCourse: function (courseId, body) {
+    return requester.putJSON(constants.serverUrl +'courses/course/' + courseId, body);
   }
 };

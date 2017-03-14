@@ -25,34 +25,3 @@ router
   .resolve();
 
 
-let data = [
-  {
-    "category": "Monday",
-    "open1": "JAN 20 1997 12:00",
-    "open2": "JAN 20 1997 13:00",
-    "close1": "JAN 20 1997 14:00",
-    "close2": "JAN 20 1997 15:00"
-  },
-  {
-    "category": "Tuesday",
-    "open": "JAN 20 1997 10:00",
-    "close": "JAN 20 1997 12:00"
-  },
-  {
-    "category": "Wednesday",
-    "open": "JAN 20 1997 10:00",
-    "close": "JAN 20 1997 12:00"
-  },
-  {
-    "category": "Thursday",
-    "open": "JAN 20 1997 10:00",
-    "close": "JAN 20 1997 12:00"
-  },
-  {
-    "category": "Friday",
-    "open": "JAN 20 1997 10:00",
-    "close": "JAN 20 1997 12:00"
-  }
-];
-
-calendarFunc(data);

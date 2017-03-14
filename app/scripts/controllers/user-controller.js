@@ -10,13 +10,15 @@ let userController = {
         authHelper.getCurrentUser()
           .then(user => {
             dataService.getUserPanel(params, user.username)
-              .then(courses => {
+              .then(response => {
                 views.get('user-courses')
                   .then(template => {
                     let templateFunc = handlebars.compile(template);
-                    let html = templateFunc(courses.result);
+                    let html = templateFunc(response.result);
 
                     $('.content').html(html);
+                    console.log(response.calendar);
+                    calendarFunc(response.calendar);
                   })
               })
           })
@@ -70,7 +72,7 @@ let userController = {
                     window.localStorage.setItem('current-user-username', response.username);
                     window.localStorage.setItem('current-user-image', response.image);
                     window.localStorage.setItem('current-user-admin', response.isAdmin);
-                    window.localStorage.setItem('current-user-id',response._id);
+                    window.localStorage.setItem('current-user-id', response._id);
                     window.localStorage.setItem('jwt-token', response.token);
                     window.location.replace('/#/user-panel');
                     auth.renderUI();
