@@ -1,0 +1,11 @@
+.user-settings-wrapper {
+  display: flex;
+
+  .user-settings {
+    height: 500px;
+    flex-basis: 50%;
+  }
+  .user-change-avatar {
+    flex-basis: 20%;
+  }
+}

@@ -23,8 +23,9 @@ let courseController = {
           .then(response => {
             views.get('course-info')
               .then((template) => {
+                console.log(response);
                 let templateFunc = handlebars.compile(template);
-                let html = templateFunc(response.result);
+                let html = templateFunc(response);
 
                 $('.content').html(html);
 

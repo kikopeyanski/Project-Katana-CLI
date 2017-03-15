@@ -1,10 +1,23 @@
-<div class="content-courses-wrapper">
+<div class="content-courses-all-wrapper">
   <div class="content-courses">
     {{#each this}}
-      <div class="course">
+      {{#if order}}
+      <div class="course" style="order: {{order}}">
+      {{else}}
+        <!--todo: change-->
+      <div class="course" style="order:2">
+      {{/if}}
+
+      <div class="course-image">
         <img src="http://localhost:1337/image/{{image}}" alt="">
-        <a href="#/course/{{_id}}">{{name}}</a>
       </div>
+      <div class="course-info">
+        <a href="#/course/{{_id}}">{{name}}<br/></a>
+        <span>{{track}}</span>
+        <div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>
+      </div>
+    </div>
     {{/each}}
   </div>
 </div>
+

@@ -17,10 +17,18 @@ let userController = {
                     let html = templateFunc(response.result);
 
                     $('.content').html(html);
-                    console.log(response.calendar);
+
                     calendarFunc(response.calendar);
                   })
               })
+          })
+      },
+      userSettings(){
+        views.get('user-settings')
+          .then(template => {
+            let templateFunc = handlebars.compile(template);
+            let html = templateFunc();
+            $('.content').html(html);
           })
       },
       register() {

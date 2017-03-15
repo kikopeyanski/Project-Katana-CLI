@@ -15,6 +15,7 @@ router.use
 router
   .on(home.getHome)
   .on('/user-panel', user.getUserPanel)
+  .on('/user-settings', user.userSettings)
   .on('/register', user.register)
   .on('/login', user.login)
   .on('/logout', user.logout)

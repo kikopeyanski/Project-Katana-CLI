@@ -21,7 +21,8 @@ let adminController = {
                     ev.preventDefault();
 
                     let data = new FormData($(this)[0]);
-
+                    console.log(data);
+                    console.log(data.startDate);
                     dataService.createCourse(data)
                       .then(msg => {
                         console.log(msg);
