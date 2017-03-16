@@ -1,23 +1,48 @@
 <div class="content-courses-all-wrapper">
   <div class="content-courses">
-    {{#each this}}
-      {{#if order}}
-      <div class="course" style="order: {{order}}">
-      {{else}}
-        <!--todo: change-->
-      <div class="course" style="order:2">
-      {{/if}}
+    <h1>First Module</h1>
+    <div class="course-module courses-first-module">
 
-      <div class="course-image">
-        <img src="http://localhost:1337/image/{{image}}" alt="">
+      {{#each this.firstModule}}
+        {{#if order}}
+        <div class="course" style="order: {{order}}">
+        {{else}}
+          <!--todo: change-->
+        <div class="course" style="order:2">
+        {{/if}}
+
+        <div class="course-image">
+          <img src="http://localhost:1337/image/{{image}}" alt="">
+        </div>
+        <div class="course-info">
+          <a href="#/course/{{_id}}">{{name}}<br/></a>
+          <span>{{track}}</span>
+          <div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>
+        </div>
       </div>
-      <div class="course-info">
-        <a href="#/course/{{_id}}">{{name}}<br/></a>
-        <span>{{track}}</span>
-        <div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>
+      {{/each}}
+    </div>
+      <h1>Second Module</h1>
+      <div class="course-module courses-second-module">
+
+        {{#each this.secondModule}}
+          {{#if order}}
+          <div class="course" style="order: {{order}}">
+          {{else}}
+            <!--todo: change-->
+          <div class="course" style="order:2">
+          {{/if}}
+
+          <div class="course-image">
+            <img src="http://localhost:1337/image/{{image}}" alt="">
+          </div>
+          <div class="course-info">
+            <a href="#/course/{{_id}}">{{name}}<br/></a>
+            <span>{{track}}</span>
+            <div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
       </div>
     </div>
-    {{/each}}
-  </div>
-</div>
-

@@ -8,6 +8,7 @@ let courseController = {
       getAllCourses(){
         dataService.getAllCourses()
           .then(response => {
+            console.log(response.result);
             views.get('courses-all')
               .then((template) => {
                 let templateFunc = handlebars.compile(template);
