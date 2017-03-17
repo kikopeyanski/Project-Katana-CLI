@@ -1,7 +1,8 @@
 <div class="content-courses-all-wrapper">
   <div class="content-courses">
-    <h1>First Module</h1>
+    <h2>First Module</h2>
     <div class="course-module courses-first-module">
+      <hr>
 
       {{#each this.firstModule}}
         {{#if order}}
@@ -11,20 +12,20 @@
         <div class="course" style="order:2">
         {{/if}}
 
-        <div class="course-image">
-          <img src="http://localhost:1337/image/{{image}}" alt="">
-        </div>
+        <!--<div class="course-image">-->
+          <!--<img src="http://localhost:1337/image/{{image}}" alt="">-->
+        <!--</div>-->
         <div class="course-info">
           <a href="#/course/{{_id}}">{{name}}<br/></a>
           <span>{{track}}</span>
-          <div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>
+          <!--<div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>-->
         </div>
       </div>
       {{/each}}
     </div>
-      <h1>Second Module</h1>
+      <h2>Second Module</h2>
       <div class="course-module courses-second-module">
-
+        <hr>
         {{#each this.secondModule}}
           {{#if order}}
           <div class="course" style="order: {{order}}">
@@ -33,13 +34,13 @@
           <div class="course" style="order:2">
           {{/if}}
 
-          <div class="course-image">
-            <img src="http://localhost:1337/image/{{image}}" alt="">
-          </div>
+          <!--<div class="course-image">-->
+            <!--<img src="http://localhost:1337/image/{{image}}" alt="">-->
+          <!--</div>-->
           <div class="course-info">
             <a href="#/course/{{_id}}">{{name}}<br/></a>
             <span>{{track}}</span>
-            <div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>
+            <!--<div class="course-color-circle" style="background-color: {{color}}; width: 13px;height: 13px"></div>-->
           </div>
         </div>
         {{/each}}
