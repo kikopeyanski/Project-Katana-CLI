@@ -4,7 +4,6 @@
 
 $default-color: #f4f4f4;
 
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -14,6 +13,7 @@ $default-color: #f4f4f4;
 
 html {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Space out content a bit */
@@ -44,20 +44,17 @@ body {
   overflow: hidden;
 }
 
-
 .header {
   flex: 1 100%;
   border-bottom: .05rem solid #e5e5e5;
-  background-color:  white;
+  background-color: white;
 }
 
 .sidebar {
-  flex: 2  118px;
+  flex: 2 118px;
 
   position: relative;
   height: 665px;
-
-
 
 }
 
@@ -65,10 +62,8 @@ body {
   flex: 80%;
   align-items: stretch;
   padding: 20px;
-  background-color:  white;
+  background-color: white;
 }
-
-
 
 button:focus {
   outline: none;
@@ -92,7 +87,7 @@ button:focus {
     overflow: hidden;
     border-radius: 0;
   }
-  .sidebar{
+  .sidebar {
     height: 90%;
   }
 
@@ -108,7 +103,7 @@ button:focus {
     overflow: hidden;
     border-radius: 0;
   }
-  .sidebar{
+  .sidebar {
     display: none;
   }
 }

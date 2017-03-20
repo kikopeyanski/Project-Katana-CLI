@@ -16,6 +16,12 @@ let courseData = {
     return requester.postJSON(constants.serverUrl + 'api/users/user/' + username + '/courses', body)
   },
   addLectureToCourse: function (courseId, body) {
-    return requester.putJSON(constants.serverUrl +'courses/course/' + courseId, body);
+    return requester.putJSON(constants.serverUrl + 'courses/course/' + courseId, body);
+  },
+  removeCourseFromUser: function (username, body) {
+    return requester.putJSON(constants.serverUrl + 'api/users/user/' + username + '/courses/remove', body)
+  },
+  addCommentToCourse: function (courseId, body) {
+    return requester.postJSON(constants.serverUrl + 'courses/course/' + courseId + '/comments', body);
   }
 };
