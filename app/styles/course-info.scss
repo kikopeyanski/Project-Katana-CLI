@@ -90,9 +90,12 @@
     }
   }
   .course-calendar {
-
-    background-color: pink;
+    padding: 20px;
     order: 2;
+
+    td{
+      height: 50%;
+    }
   }
   .course-chat {
     padding: 20px;

@@ -27,6 +27,7 @@ body {
 }
 
 .container {
+  height: 100%;
   min-height: 740px;
   max-width: 1600px;
   padding: 0;
@@ -59,6 +60,7 @@ body {
 }
 
 .content {
+  height: 665px;
   flex: 80%;
   align-items: stretch;
   padding: 20px;

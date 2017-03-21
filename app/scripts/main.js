@@ -1,10 +1,11 @@
-/*globals Navigo controller homeData userData homeController userController adminController adminData views*/
+/*globals toaster Navigo controller homeData userData homeController userController adminController adminData views*/
 'use strict';
 let auth = authController.get(views);
 let home = homeController.get(homeData, views);
 let user = userController.get(userData, views, auth);
 let admin = adminController.get(adminData, views);
 let course = courseController.get(courseData, views);
+toaster.init();
 
 let router = new Navigo(null, false);
 

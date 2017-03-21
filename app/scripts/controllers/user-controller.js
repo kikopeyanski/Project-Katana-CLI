@@ -24,11 +24,32 @@ let userController = {
           })
       },
       userSettings(){
+        let user;
+        authHelper.getCurrentUser()
+          .then(result => {
+            user = result;
+          });
+
         views.get('user-settings')
           .then(template => {
             let templateFunc = handlebars.compile(template);
             let html = templateFunc();
+
             $('.content').html(html);
+
+            $('#user-settings-form').on('submit', function (ev) {
+              ev.preventDefault();
+              let data = {
+                newPassword: $('#newPassword').val(),
+                currentPassword: $('#currentPassword').val(),
+                email: $('#email').val()
+              };
+
+              dataService.changeUserSettings(user.username, data)
+                .then();
+
+              return false;
+            })
           })
       },
       register() {
@@ -38,6 +59,24 @@ let userController = {
             let html = templateFunc();
             $('.content').html(html);
 
+            $('#image').change(function () {
+              let input = $(this)[0];
+              if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                  $('#user-image')
+                    .attr('src', e.target.result);
+                  $('.register-user-image')
+                    .css('display', 'block');
+                };
+                reader.readAsDataURL(input.files[0]);
+              }
+            });
+            $('#user-create-user').change(function () {
+              let formData = $('#user-create-user').serializeArray();
+              formValidation.validateForm(formData,$(this));
+              return false; //don't submit
+            });
             $('#user-create-user').submit(function (ev) {
               ev.preventDefault();
 
@@ -86,6 +125,7 @@ let userController = {
                     auth.renderUI();
                   })
                   .catch(err => {
+                    toastr['error']('Incorrect username or password');
                     console.log(err);
                   })
               })

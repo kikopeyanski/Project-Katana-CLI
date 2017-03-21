@@ -12,6 +12,7 @@
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.css" />
+  <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -22,6 +23,7 @@
   <link rel="stylesheet" href="styles/content.css">
   <link rel="stylesheet" href="styles/courses-all.css">
   <link rel="stylesheet" href="styles/course-info.css">
+  <link rel="stylesheet" href="styles/login.css">
   <!--chart styles-->
   <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
   <!--chart styles end-->
@@ -125,11 +127,12 @@
 <script src="/bower_components/tether/dist/js/tether.js"></script>
 <script src="/bower_components/modernizr/modernizr.js"></script>
 <script src="/bower_components/handlebars/handlebars.js"></script>
-<script src="/bower_components/handlebars-intl/dist/handlebars-intl.js"></script>
 <script src="/bower_components/navigo/lib/navigo.js"></script>
 <script src="/bower_components/moment/moment.js"></script>
 <script src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
+<script src="/bower_components/toastr/toastr.js"></script>
 <!-- endbower -->
+<script src="/bower_components/handlebars-intl/dist/handlebars-intl.js"></script>
 <!-- endbuild -->
 
 <!-- build:js scripts/plugins.js -->
@@ -159,6 +162,8 @@
 <script src="scripts/utils/requester.js"></script>
 <script src="scripts/utils/auth.js"></script>
 <script src="scripts/utils/calendar.js"></script>
+<script src="scripts/utils/toaster.js"></script>
+<script src="scripts/utils/form-validation.js"></script>
 
 
 <!--views-->

@@ -9,7 +9,7 @@ let authHelper = {
       _id: window.localStorage.getItem('current-user-id')
     };
 
-    if (user.username == null) {
+    if (user.username === null) {
       return requester.getJSON(constants.serverUrl + 'api/auth/getLoggedUser')
     }
 

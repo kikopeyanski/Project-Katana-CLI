@@ -42,6 +42,20 @@ let courseController = {
                           user = response;
                           username = user.username;
                         });
+                      $('#course-calendar').fullCalendar({
+                        events: response.result.course.lectures.map((lecture) => {
+                          return {
+                            title: lecture.name,
+                            start: lecture.date,
+                            allDay: true
+                          };
+                        }),
+                        color: response.result.course.color,
+                        contentHeight: 250,
+                        aspectRatio: 2,
+                        firstDay: 1
+                      });
+
                       let comments = $('.comments-all');
                       comments.scrollTop($(comments)[0].scrollHeight);
                       $('input[name=hw]').click(function () {
@@ -133,4 +147,4 @@ let courseController = {
       }
     }
   }
-  ;
+;

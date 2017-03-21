@@ -1,3 +1,4 @@
+@import "_variables";
 
 .content-courses-wrapper {
   font-family: 'Roboto', sans-serif !important;
@@ -113,6 +114,13 @@
       display: none !important;
     }
   }
+}
+
+.toast-custom-position{
+  position: absolute;
+  bottom: 20%;
+  transform: translate(-50%,50%);
+  left: 50%;
 }
 
 //TABLET
