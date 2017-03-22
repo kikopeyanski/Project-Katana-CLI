@@ -17,6 +17,7 @@ router
   .on(home.getHome)
   .on('/user-panel', user.getUserPanel)
   .on('/user-settings', user.userSettings)
+  .on('/user-settings/avatar', user.userAvatar)
   .on('/register', user.register)
   .on('/login', user.login)
   .on('/logout', user.logout)

@@ -1,100 +1,128 @@
 @import "_variables";
 
-.login-register-page-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.content {
 
-  .login-register {
-    width: 35%;
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: translate(-50%, -50%);
-    align-content: flex-start;
-    align-items: center;
-    text-align: left;
+  .login-register-page-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
 
-    label {
-      color: dodgerblue;
-      font-size: 11px;
-      margin-bottom: 2px;
+    .login-register {
+      width: 35%;
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      align-content: flex-start;
+      align-items: center;
+      text-align: left;
+
+      label {
+        color: dodgerblue;
+        font-size: 11px;
+        margin-bottom: 2px;
+      }
+      input {
+        border: none;
+        background: rgba(255, 255, 255, 0.8) no-repeat;
+        background-size: 20px;
+        background-position: 2%;
+        padding-left: 35px;
+
+        &#username {
+          background-image: url("../images/students.png");
+        }
+        &#password {
+          background-image: url("../images/psw.png");
+        }
+        &#confirm-password {
+          background-image: url("../images/repeat.png");
+        }
+        &#email {
+          background-image: url("../images/mail.png");
+        }
+        &#image {
+          padding-left: 0;
+        }
+
+        &:focus {
+          @include border-glow($main-color)
+        }
+
+      }
+      .form-control-feedback {
+        display: none;
+      }
+
+      .main-action-button {
+        @extend .btn-main-action;
+        width: 100%;
+      }
+
+      .register-user-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        transform: translate(50%, -50%);
+        @include border-no-overflow(100%, white);
+
+        img {
+          width: 75px;
+          height: 75px;
+        }
+      }
+      .background-blur-element {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: whitesmoke;
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+        opacity: 0.8;
+        z-index: -1;
+      }
+
     }
-    input {
-      border: none;
-      background: rgba(255, 255, 255, 0.8) no-repeat;
-      background-size: 20px;
-      background-position: 2%;
-      padding-left: 35px;
-
-      &#username {
-        background-image: url("../images/students.png");
-      }
-      &#password {
-        background-image: url("../images/psw.png");
-      }
-      &#confirm-password {
-        background-image: url("../images/repeat.png");
-      }
-      &#email {
-        background-image: url("../images/mail.png");
-      }
-      &#image {
-        padding-left: 0;
-      }
-
-      &:focus {
-        @include border-glow($main-color)
-      }
-
+    .information-wrapper {
+      height: 100%;
+      background-image: url("../images/tree_bark.png");
     }
-    .form-control-feedback {
-      display: none;
-    }
+  }
 
-    .main-action-button {
-      @extend .btn-main-action;
+}
+
+@media (min-device-width: 1200px) and (max-device-width: 1600px) {
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  body .login-form-wrapper {
+    width: 100%;
+  }
+  body .login-register {
+    width: 100%;
+  }
+
+}
+
+@media (min-device-width: 320px) and (max-device-width: 640px) {
+  .login-register-page-wrapper {
+    .login-form-wrapper {
       width: 100%;
     }
-
-    .register-user-image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: none;
-      transform: translate(50%, -50%);
-      @include border-no-overflow(100%, white);
-
-      img {
-        width: 75px;
-        height: 75px;
-      }
+    .login-register {
+      margin-top: 75px;
+      height: 100%;
+      width: 100%;
     }
-
-  }
-  .information-wrapper {
-    height: 100%;
-    background-color: gainsboro;
-  }
-}
-
-//TABLET
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .login-form-wrapper {
-    width: 100%;
   }
 
-}
-
-//SMARTPHONE
-@media screen and (max-width: 47em) {
-  .login-form-wrapper {
-    width: 100%;
-  }
-  .information-wrapper {
-    display: none;
-  }
 }
 

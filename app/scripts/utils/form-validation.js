@@ -5,7 +5,7 @@ let formValidation = {
         case 'username':
           break;
         case 'password':
-          if (`${input.value}`.length < 4 || 25 < `${input.value}`.length) {
+          if ((`${input.value}`.length < 4 || 25 < `${input.value}`.length) && `${input.value}`.length > 1) {
             $(`div.password-input`).addClass('has-danger');
             $(`div.password-input div`).css('display', 'block');
           } else {
@@ -14,8 +14,7 @@ let formValidation = {
           }
           break;
         case'confirmedPassword':
-          console.log($('#password').val());
-          if (input.value !== $('#password').val()) {
+          if (input.value !== $('#password').val() && $('#password').val() && input.value) {
             $(`div.confirm-password-input`).addClass('has-danger');
             $(`div.confirm-password-input div`).css('display', 'block');
           } else {

@@ -7,130 +7,121 @@ let userController = {
   get: function (dataService, views, auth) {
     return {
       getUserPanel(params) {
-        authHelper.getCurrentUser()
-          .then(user => {
-            dataService.getUserPanel(params, user.username)
-              .then(response => {
-                views.get('user-courses')
-                  .then(template => {
-                    let templateFunc = handlebars.compile(template);
-                    let html = templateFunc(response.result);
 
-                    $('.content').html(html);
+        animation.start();
+        let template;
 
-                    calendarFunc(response.calendar);
-                  })
-              })
+        views.get('user-courses')
+          .then(response => {
+            template = response;
+            return authHelper.getCurrentUser()
           })
-      },
-      userSettings(){
-        let user;
-        authHelper.getCurrentUser()
-          .then(result => {
-            user = result;
+          .then(user => {
+            return dataService.getUserPanel(params, user.username)
+          })
+          .then(response => {
+            let templateFunc = handlebars.compile(template);
+            let html = templateFunc(response.result);
+
+            $('.content').html(html);
+
+            calendarFunc(response.calendar);
+          })
+          .catch(err => {
+            console.log(err);
           });
 
+        animation.stop();
+      },
+      userSettings(){
+        animation.start();
+        let user;
+        let template;
+
         views.get('user-settings')
-          .then(template => {
+          .then(response => {
+            template = response;
+            return authHelper.getCurrentUser()
+          })
+          .then(response => {
+            user = response;
+          })
+          .then(() => {
             let templateFunc = handlebars.compile(template);
             let html = templateFunc();
 
             $('.content').html(html);
 
-            $('#user-settings-form').on('submit', function (ev) {
-              ev.preventDefault();
-              let data = {
-                newPassword: $('#newPassword').val(),
-                currentPassword: $('#currentPassword').val(),
-                email: $('#email').val()
-              };
-
-              dataService.changeUserSettings(user.username, data)
-                .then();
-
-              return false;
-            })
+            animation.stop();
           })
+          .then(() => {
+            eventHandler.userSettingsEvent(user, dataService.changeUserSettings)
+              .then(response => {
+                console.log(response);
+                toastr['success']('User settings successfully updated');
+              })
+              .catch(err => {
+                toastr['error'](err);
+              })
+          });
+      },
+      userAvatar(){
+        animation.start();
+        let template;
+        let user;
+        authHelper.getCurrentUser()
+          .then(response => {
+            user = response;
+          });
+        views.get('user-avatar')
+          .then(response => {
+            template = response;
+            let templateFunc = handlebars.compile(template);
+            let html = templateFunc(user);
+            $('.content').html(html);
+            eventHandler.userAvatarEvent();
+            eventHandler.userAvatarChangeEvent(dataService.changeUserAvatar, user.username);
+            animation.stop();
+          })
+
       },
       register() {
+        animation.start();
         views.get('register')
           .then(template => {
             let templateFunc = handlebars.compile(template);
             let html = templateFunc();
             $('.content').html(html);
 
-            $('#image').change(function () {
-              let input = $(this)[0];
-              if (input.files && input.files[0]) {
-                let reader = new FileReader();
-                reader.onload = function (e) {
-                  $('#user-image')
-                    .attr('src', e.target.result);
-                  $('.register-user-image')
-                    .css('display', 'block');
-                };
-                reader.readAsDataURL(input.files[0]);
-              }
-            });
-            $('#user-create-user').change(function () {
-              let formData = $('#user-create-user').serializeArray();
-              formValidation.validateForm(formData,$(this));
-              return false; //don't submit
-            });
-            $('#user-create-user').submit(function (ev) {
-              ev.preventDefault();
-
-              let data = new FormData($(this)[0]);
-
-              dataService.register(data)
-                .then(function () {
-                  console.log('successfully registered');
-                })
-                .then(
-                  dataService.login(data)
-                )
-                .catch(function () {
-                  console.log('error registering')
-                });
-
-              return false;
-            })
+            eventHandler.userAvatarEvent();
+            eventHandler.userRegisterFormChangeEvent();
+            eventHandler.userRegisterFormSubmitEvent(dataService.register, dataService.login);
+            animation.stop();
           });
-        return Promise.resolve();
       },
       login() {
+        animation.start();
         views.get('login')
           .then(template => {
               let templateFunc = handlebars.compile(template);
               let html = templateFunc();
               $('.content').html(html);
-
-              $('#login-submit').on('click', function () {
-                let username = $('#username').val();
-                let password = $('#password').val();
-
-                let userData = {
-                  username: username,
-                  password: password
-                };
-
-                dataService.login(userData)
-                  .then(response => {
-                    window.localStorage.setItem('current-user-username', response.username);
-                    window.localStorage.setItem('current-user-image', response.image);
-                    window.localStorage.setItem('current-user-admin', response.isAdmin);
-                    window.localStorage.setItem('current-user-id', response._id);
-                    window.localStorage.setItem('jwt-token', response.token);
-                    window.location.replace('/#/user-panel');
-                    auth.renderUI();
-                  })
-                  .catch(err => {
-                    toastr['error']('Incorrect username or password');
-                    console.log(err);
-                  })
-              })
+              animation.stop();
+              return eventHandler.userLoginFormSubmit(dataService.login);
             }
           )
+          .then(response => {
+            window.localStorage.setItem('current-user-username', response.username);
+            window.localStorage.setItem('current-user-image', response.image);
+            window.localStorage.setItem('current-user-admin', response.isAdmin);
+            window.localStorage.setItem('current-user-id', response._id);
+            window.localStorage.setItem('jwt-token', response.token);
+            window.location.replace('/#/user-panel');
+            auth.renderUI();
+          })
+          .catch(err => {
+            console.log(err)
+          })
       },
       logout(){
         window.localStorage.setItem('jwt-token', '');

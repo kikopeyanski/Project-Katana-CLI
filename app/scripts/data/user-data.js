@@ -11,7 +11,10 @@ let userData = {
   login: function (body) {
     return requester.postJSON(constants.serverUrl + 'api/auth/login', body);
   },
-  changeUserSettings: function (username,body) {
-    return requester.putJSON(constants.serverUrl + 'api/users/user/' + username +'/settings',body)
+  changeUserSettings: function (username, body) {
+    return requester.putJSON(constants.serverUrl + 'api/users/user/' + username + '/settings', body)
+  },
+  changeUserAvatar: function (username, body) {
+    return requester.postWithFile(constants.serverUrl + 'api/users/user/' + username + '/settings/avatar', body);
   }
 };

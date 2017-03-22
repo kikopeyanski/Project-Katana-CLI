@@ -1,11 +1,102 @@
+@import "_variables";
+
 .user-settings-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  .change-settings-navbar {
+    flex-basis: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow: hidden;
 
-  .user-settings {
-    height: 500px;
-    flex-basis: 50%;
+    a {
+      flex-basis: 50%;
+      border: 1px solid dodgerblue;
+      border-radius: 10px;
+      background-color: #F4F4F4;
+
+      &.password-link {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &.avatar-link {
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:hover {
+        color: white;
+        background-color: dodgerblue;
+      }
+      &.active {
+        color: white;
+        background-color: dodgerblue;
+      }
+    }
   }
-  .user-change-avatar {
-    flex-basis: 20%;
+  .user-settings {
+    margin-top: 20px;
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+
+      label {
+        text-align: center;
+        flex-basis: 40%;
+        margin: 10px;
+      }
+      input {
+        margin: 10px;
+      }
+      button {
+        margin: 20px auto auto;
+        width: 40%;
+      }
+    }
+  }
+  .avatar-settings {
+    margin-top: 20px;
+    width: 100%;
+
+    text-align: center;
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      width: 50%;
+      margin: auto;
+      position: relative;
+      @include border-no-overflow(20px, dodgerblue);
+
+      .image-input {
+        order: 2;
+        flex-basis: 100%;
+      }
+      .register-user-image {
+        order: 1;
+        flex-basis: 100%;
+        margin: 20px;
+        img {
+
+          @include border-no-overflow(100%, transperant);
+
+          width: 200px;
+          height: auto;
+        }
+      }
+      .password-input {
+        order: 3;
+        margin: auto auto 20px;
+        flex-basis: 80%;
+      }
+      .button-send {
+        margin: auto auto 20px;
+        order: 4;
+      }
+    }
+
   }
 }

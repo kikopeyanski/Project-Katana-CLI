@@ -7,22 +7,23 @@ let courseController = {
     get: function (dataService, views) {
       return {
         getAllCourses(){
+          let courses;
           dataService.getAllCourses()
             .then(response => {
-              views.get('courses-all')
-                .then((template) => {
-                  let templateFunc = handlebars.compile(template);
-                  let html = templateFunc(response.result);
+              courses = response;
+              return views.get('courses-all')
+            })
+            .then((template) => {
+              let templateFunc = handlebars.compile(template);
+              let html = templateFunc(courses.result);
 
-                  $('.content').html(html);
-                })
+              $('.content').html(html);
             })
         },
         getCourseById(params){
           let id = params.id;
           dataService.getCourseById(id)
             .then(response => {
-                console.log(response)
                 views.get('course-info')
                   .then((template) => {
 
