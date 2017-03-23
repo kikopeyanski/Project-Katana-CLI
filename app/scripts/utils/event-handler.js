@@ -114,5 +114,45 @@ let eventHandler = {
       })
 
     })
+  },
+  navbarSearch(){
+    let searchBar = $('#search-value');
+    $('.navbar-search').on('click', function () {
+      searchBar.css('display', 'inline-block');
+      searchBar.focus();
+    });
+    searchBar.on('input', function (ev) {
+      window.location.replace('/#/courses/all');
+      $('.course').each(function () {
+        let courseData = $(this).find('.course-info').find('a').html().toLowerCase().indexOf(searchBar.val().toLowerCase());
+        if (courseData !== -1
+          && searchBar.val() !== '') {
+          $(this).addClass('found');
+          $(this).removeClass('not-found');
+        } else if (searchBar.val() === '') {
+          $(this).removeClass('not-found');
+          $(this).removeClass('found');
+        } else {
+          $(this).removeClass('found');
+          $(this).addClass('not-found');
+        }
+
+        // if ($(`${course} span`).val().indexOf(searchBar.val()) !== -1) {
+        //   $(`${course}`).css('border-colo', 'red');
+        // }
+      })
+    })
+  },
+  navbarHide(){
+    let width = $(window).width();
+    if(width >240 && width<460){
+      $(window).scroll(function(){
+        if ($(this).scrollTop() > 200) {
+          $('.header').slideUp(500);
+        } else {
+          $('.header').slideDown(500);
+        }
+      });
+    }
   }
 };

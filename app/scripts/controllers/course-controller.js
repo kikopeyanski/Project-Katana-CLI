@@ -26,7 +26,6 @@ let courseController = {
             .then(response => {
                 views.get('course-info')
                   .then((template) => {
-
                       let templateFunc = handlebars.compile(template);
                       let html = templateFunc(response);
 
@@ -68,26 +67,32 @@ let courseController = {
 
                       });
                       $('.add-course').on('click', function () {
+                        animation.start();
+                        $(this).addClass('hide');
+                        $('.remove-course').removeClass('hide');
                         dataService.addCourseToUser(username, body)
                           .then(
-                            console.log('course ' + response.result.course.name + ' added to user ' + username + ' successfully')
+                            toastr["success"]('course ' + response.result.course.name + ' added  successfully')
                           )
                           .catch(err => {
                             console.log(err);
-                          })
-
+                          });
+                        animation.stop();
                       });
                       $('.remove-course').on('click', function () {
-                        console.log('removing');
+                        animation.start();
+                        $(this).addClass('hide');
+                        $('.add-course').removeClass('hide');
                         dataService.removeCourseFromUser(username, body)
                           .then(response => {
-                              console.log(response)
-
+                              toastr["warning"]('course removed successfully')
                             }
                           )
                           .catch(err => {
                             console.log(err);
                           })
+
+                        animation.stop();
                       });
                       $('.lecture-create-lecture-btn').on('click', function () {
                         let lecture = {

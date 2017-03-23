@@ -9,14 +9,18 @@ let authController = {
       renderUI(){
         authHelper.getCurrentUser()
           .then(user => {
+            //magic...
+            user.isAdmin = user.isAdmin === 'true';
             views.get('nav-home')
               .then(template => {
                 let templateFunc = handlebars.compile(template);
                 let html = templateFunc(user);
                 $('.header').html(html);
+                eventHandler.navbarSearch();
+                eventHandler.navbarHide()
               });
 
-            //get sidebar for current user
+
             views.get('side-home')
               .then(template => {
                 let templateFunc = handlebars.compile(template);
@@ -43,26 +47,12 @@ let authController = {
                 let templateFunc = handlebars.compile(template);
                 let html = templateFunc();
                 $('.header').html(html);
+
+                eventHandler.navbarHide();
+
+                $('.sidebar').css('display', 'none')
               });
-            $('.sidebar').css('display', 'none')
-            // views.get('side-home')
-            //   .then(template => {
-            //     let templateFunc = handlebars.compile(template);
-            //     let html = templateFunc();
-            //     $('.sidebar').html(html);
-            //
-            //     $('.button-completed').on('click', function () {
-            //       window.location = 'http://localhost:9000/#/user-panel';
-            //       $('.button-pending').removeClass('selected');
-            //       $(this).addClass('selected');
-            //     });
-            //
-            //     $('.button-pending').on('click', function () {
-            //       window.location = 'http://localhost:9000/#/courses/all';
-            //       $('.button-completed').removeClass('selected');
-            //       $(this).addClass('selected');
-            //     });
-            //   });
+
           })
       }
     }

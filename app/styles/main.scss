@@ -101,14 +101,24 @@ body.loading #animation {
 }
 
 //TABLET
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  body, .container {
-    width: 100%;
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
     height: 100%;
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     border-radius: 0;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+  .content {
+    height: 100%;
+    overflow-y: scroll;
   }
   .sidebar {
     height: 90%;
@@ -117,7 +127,7 @@ body.loading #animation {
 }
 
 //SMARTPHONE
-@media screen and (max-width: 47em) {
+@media (min-device-width: 320px) and (max-device-width: 640px) {
   body, .container {
     width: 100%;
     height: 100%;
@@ -137,8 +147,18 @@ body.loading #animation {
       height: 100%;
       padding: 0;
     }
+    .sidebar {
+      position: fixed;
+      bottom: 0;
+      display: flex !important;
+      flex-wrap: nowrap;
+    }
   }
-  .sidebar {
-    display: none;
+  .container {
+
   }
+  .course {
+    flex-basis: 100%;
+  }
+
 }

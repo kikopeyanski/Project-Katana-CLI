@@ -10,7 +10,8 @@ let authHelper = {
     };
 
     if (user.username === null) {
-      return requester.getJSON(constants.serverUrl + 'api/auth/getLoggedUser')
+      return Promise.reject();
+      // return requester.getJSON(constants.serverUrl + 'api/auth/getLoggedUser')
     }
 
     return Promise.resolve(user);

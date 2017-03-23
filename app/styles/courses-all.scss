@@ -1,3 +1,5 @@
+@import "_variables";
+
 .content-courses-all-wrapper {
   font-family: 'Roboto', sans-serif !important;
   height: 100%;
@@ -39,6 +41,13 @@
         position: relative;
         border: 1px solid transparent;
         border-radius: 5px;
+
+        &.found {
+          @include border-glow($specific-green-color);
+        }
+        &.not-found {
+          opacity: 0.5;
+        }
       }
       .course-image {
         flex-basis: 100%;
@@ -68,6 +77,24 @@
           color: #586268;
         }
       }
+    }
+  }
+}
+
+@media (min-device-width: 1200px) and (max-device-width: 1600px) {
+
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}
+
+@media (min-device-width: 320px) and (max-device-width: 640px) {
+  .content-courses-all-wrapper .content-courses{
+    flex-wrap: wrap;
+    .course-module{
+      flex-basis: 100%;
+      justify-content: center;
     }
   }
 }

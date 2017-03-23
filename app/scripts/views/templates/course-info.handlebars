@@ -20,7 +20,7 @@
         </span>
       </span>
         </div>
-        <img src="images/separator.png" alt="">
+        <img class="separator" src="images/separator.png" alt="">
 
         <div class="course-students">
           <div class="course-students-icon">
@@ -39,8 +39,10 @@
 
         {{#if result.isSigned}}
           <button class="course-button remove-course">Unsign for this course</button>
+          <button class="course-button add-course hide">Sign in for this course</button>
         {{else}}
-          <button class="course-button add-course">Sign in for this course</button>
+          <button class="course-button remove-course hide">Unsign for this course</button>
+          <button class="course-button add-course ">Sign in for this course</button>
         {{/if}}
       </div>
       <hr>
@@ -48,22 +50,6 @@
         <p>{{result.course.description}}</p>
       </div>
     </div>
-    <!--<div class="course-info-component course-lectures">-->
-    <!--{{#each result.course.lectures}}-->
-    <!--<div class="lectures row">-->
-    <!--<span class="lecture-name col-md-6">-->
-    <!--{{name}}-->
-    <!--</span>-->
-    <!--<span class="lecture-homework col-md-6">-->
-    <!--{{#if this.homework}}-->
-      <!--Homework-->
-      <!--{{else}}-->
-      <!--No Homework-->
-      <!--{{/if}}-->
-    <!--</span>-->
-    <!--</div>-->
-    <!--{{/each}}-->
-    <!--</div>-->
     <div class="course-info-component course-calendar" id="course-calendar">
     </div>
   </div>
@@ -93,27 +79,28 @@
   </div>
 
   <!--Admin Panel-->
-  {{#if user.isAdmin}}
-    <div class="admin-course-add-lecture row">
-      <label>Lecture Name
-        <input type="text" class="lecture-name"/>
-      </label>
-      <label>Lecture Date
-        <input type="date" class="lecture-date">
-      </label>
-      <label>Lecture start hour
-        <input type="time" class="lecture-startHour"/>
-      </label>
-      <label>Lecture end hour
-        <input type="time" class="lecture-endHour"/>
-      </label>
-      <input type="button" class="lecture-create-lecture-btn" value="Create Lecture">
-      <label>Homework
-        <input name="hw" type="checkbox" class="lecture-homework">
-      </label>
-      <label class="homework" style="display: none;">
-        <input type="date" class="lecture-homework-deadline">
-      </label>
-    </div>
-  {{/if}}
+
 </div>
+{{#if user.isAdmin}}
+  <div class="admin-course-add-lecture row">
+    <label>Lecture Name
+      <input type="text" class="lecture-name"/>
+    </label>
+    <label>Lecture Date
+      <input type="date" class="lecture-date">
+    </label>
+    <label>Lecture start hour
+      <input type="time" class="lecture-startHour"/>
+    </label>
+    <label>Lecture end hour
+      <input type="time" class="lecture-endHour"/>
+    </label>
+    <input type="button" class="lecture-create-lecture-btn" value="Create Lecture">
+    <label>Homework
+      <input name="hw" type="checkbox" class="lecture-homework">
+    </label>
+    <label class="homework" style="display: none;">
+      <input type="date" class="lecture-homework-deadline">
+    </label>
+  </div>
+{{/if}}

@@ -1,3 +1,5 @@
+@import "_variables";
+
 .header {
   $border-radius: 4px;
   $border-color: #ebeae9;
@@ -33,6 +35,21 @@
     align-self: center;
 
     width: 100%;
+
+    input {
+      display: none;
+      margin-left: -30px;
+      padding-left: 40px;
+      background-color: transparent;
+      border-color: transparent;
+      margin-right: 0;
+
+      &:focus {
+        outline-width: 0;
+        background-color: lightgray;
+        opacity: 0.5;
+      }
+    }
 
     .icon {
       margin: auto 0 auto 20px;
@@ -80,12 +97,21 @@
 
 }
 
-@media screen and (max-width: 47em) {
+@media (min-device-width: 1200px) and (max-device-width: 1600px) {
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+
+}
+
+@media (min-device-width: 320px) and (max-device-width: 640px) {
   .navbar-logo-wrapper {
-    display: none;
+    .navbar-logo {
+      margin-right: 0;
+    }
+    &.logged-in{
+      display: none;
+    }
   }
-  .navbar-options, .navbar-user-panel {
-    display: inline-block;
-    width: 48%;
-  }
+
 }

@@ -72,9 +72,9 @@
           border: 1px solid transparent;
           border-radius: 100%;
 
-          a {
+          span {
             position: absolute;
-            top: -2px;
+            top: -1px;
             left: 6px;
             color: white;
           }
@@ -110,30 +110,58 @@
       }
     }
     //hide unnecessary buttons,link,commercials
-    desc,a,rect,image{
+    desc, a, rect, image {
       display: none !important;
     }
   }
 }
 
-.toast-custom-position{
+.toast-custom-position {
   position: absolute;
   bottom: 20%;
-  transform: translate(-50%,50%);
+  transform: translate(-50%, 50%);
   left: 50%;
 }
 
-//TABLET
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  .course {
-    flex-basis: 45% !important;
-  }
-
+@media (min-device-width: 1200px) and (max-device-width: 1600px) {
 }
 
-//SMARTPHONE
-@media screen and (max-width: 47em) {
-  .course {
-    flex-basis: 45% !important;
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .content-courses-wrapper {
+    .content-courses {
+      height:auto;
+      flex-wrap: wrap;
+      .course {
+        max-width: 100%;
+        flex-basis: 45%;
+      }
+    }
+    .content-calendar{
+      height: 70%;
+    }
   }
+}
+
+@media (min-device-width: 320px) and (max-device-width: 640px) {
+  html {
+    height: inherit;
+  }
+  .content{
+    margin-top: 18%;
+  }
+  .content-courses-wrapper {
+    .content-courses {
+      flex-wrap: wrap;
+      .course {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+
+    }
+    .content-calendar {
+      width: 320px;
+      overflow-x: scroll;
+    }
+  }
+
 }
