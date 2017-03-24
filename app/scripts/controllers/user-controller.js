@@ -20,8 +20,9 @@ let userController = {
             return dataService.getUserPanel(params, user.username)
           })
           .then(response => {
+            console.log(response);
             let templateFunc = handlebars.compile(template);
-            let html = templateFunc(response.result);
+            let html = templateFunc(response);
 
             $('.content').html(html);
 

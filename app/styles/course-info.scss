@@ -176,7 +176,7 @@
 //ADMIN STYLES NOT IMPORTANT
 .admin-course-add-lecture {
   border: 1px solid red;
-  visibility: hidden;
+  color: white;
 }
 
 @media (min-device-width: 1200px) and (max-device-width: 1600px) {
@@ -224,7 +224,7 @@
 
 @media (min-device-width: 320px) and (max-device-width: 640px) {
   .container {
-    margin-bottom: 10%;
+    overflow: hidden;
   }
   .course-info-wrapper {
     .course-info {

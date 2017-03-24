@@ -9,8 +9,19 @@
 {{#if this}}
     <div class="navbar-search-wrapper">
       <div class="navbar-search">
-
-        <img class="icon" id="bell-icon" src="images/bell.png">
+        <img class="icon" id="bell-icon" content="notification-icon" src="images/bell.png">
+        {{#if this.notifications}}
+          <div class="notification-count"><span>{{this.notificationCount}}</span></div>
+          <div class="notification-panel">
+            {{#each this.notifications}}
+              <div id="{{_id}}" class="notification">
+                <p>Lecture <span class="lecture-name">{{lectureName}}</span> was added to course <a
+                  href="/#/course/{{courseId}}" class="course-name">{{course}}</a></p>
+              </div>
+              <hr>
+            {{/each}}
+          </div>
+        {{/if}}
         <img class="icon" id="zoom-icon" src="images/zoom.png">
         <input type="text" id="search-value">
       </div>
@@ -45,7 +56,7 @@
     {{else}}
       <button type="button" class="btn  float-right dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-        <span>Hello Guest, Log in for more</span>
+        <span>Hello Guest!</span>
       </button>
     {{/if}}
   </div>

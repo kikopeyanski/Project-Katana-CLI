@@ -1,6 +1,6 @@
 /*globals toaster Navigo controller homeData userData homeController userController adminController adminData views*/
 'use strict';
-let auth = authController.get(views);
+let auth = authController.get(userData,views);
 let home = homeController.get(homeData, views);
 let user = userController.get(userData, views, auth);
 let admin = adminController.get(adminData, views);

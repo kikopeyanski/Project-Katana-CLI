@@ -16,5 +16,8 @@ let userData = {
   },
   changeUserAvatar: function (username, body) {
     return requester.postWithFile(constants.serverUrl + 'api/users/user/' + username + '/settings/avatar', body);
+  },
+  notificationSeen: function (username, body) {
+    return requester.postJSON(constants.serverUrl + 'api/users/user/' + username + '/notifications', body)
   }
 };

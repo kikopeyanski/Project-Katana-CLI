@@ -33,7 +33,7 @@
   .navbar-search-wrapper {
     flex: 2 auto;
     align-self: center;
-
+    position: relative;
     width: 100%;
 
     input {
@@ -56,6 +56,45 @@
       height: 20px;
     }
 
+  }
+  .notification-panel {
+    position: absolute;
+    top: 50px;
+    left: -10px;
+    z-index: 1700;
+    background-color: #F4F4F4;
+    opacity: 0.9;
+    display: none;
+
+    .notification {
+      padding: 20px;
+    }
+    .lecture-name {
+      color: orangered;
+    }
+    .course-name {
+      color: dodgerblue;
+
+    }
+  }
+  div.notification-count {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -5px;
+    background-color: red;
+    right: 10px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    color: white;
+    font-size: 11px;
+    span {
+      position: absolute;
+      top: -2px;
+      right: 3px;
+    }
   }
 
   .navbar-user-panel {
@@ -109,9 +148,15 @@
     .navbar-logo {
       margin-right: 0;
     }
-    &.logged-in{
+    &.logged-in {
       display: none;
     }
+  }
+  .notification-panel {
+    min-width: 100vw;
+  }
+  .admin-course-add-lecture {
+    color: black;
   }
 
 }

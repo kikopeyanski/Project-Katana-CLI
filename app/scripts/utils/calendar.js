@@ -69,7 +69,7 @@ function calendarFunc(data) {
         {"value": moment('14-03-2017 10:00', 'DD-MM-YYYY HH:mm'), "label": '10:00', "color": "#828282"},
         {"value": moment('14-03-2017 11:00', 'DD-MM-YYYY HH:mm'), "label": '11:00', "color": "#828282"},
         {"value": moment('14-03-2017 12:00', 'DD-MM-YYYY HH:mm'), "label": '12:00', "color": "#828282"},
-        {"value": moment('14-03-2017 13:00', 'DD-MM-YYYY HH:mm'), "label": 'Launch Break', "color": "#aa0000"},
+        {"value": moment('14-03-2017 13:00', 'DD-MM-YYYY HH:mm'), "label": 'LB', "color": "orangered"},
         {"value": moment('14-03-2017 14:00', 'DD-MM-YYYY HH:mm'), "label": '14:00', "color": "#828282"},
         {"value": moment('14-03-2017 15:00', 'DD-MM-YYYY HH:mm'), "label": '15:00', "color": "#828282"},
         {"value": moment('14-03-2017 16:00', 'DD-MM-YYYY HH:mm'), "label": '16:00', "color": "#828282"},
@@ -78,7 +78,7 @@ function calendarFunc(data) {
         {"value": moment('14-03-2017 19:00', 'DD-MM-YYYY HH:mm'), "label": '19:00', "color": "#828282"},
         {"value": moment('14-03-2017 20:00', 'DD-MM-YYYY HH:mm'), "label": '20:00', "color": "#828282"},
         {"value": moment('14-03-2017 21:00', 'DD-MM-YYYY HH:mm'), "label": '', "color": "#828282"},
-        {"value": moment('14-03-2017 22:00', 'DD-MM-YYYY HH:mm'), "label": 'Homework', "color": "#cc0000"},
+        {"value": moment('14-03-2017 22:00', 'DD-MM-YYYY HH:mm'), "label": 'HW', "color": "orangered"},
       ],
       "valueAxes": [
         {

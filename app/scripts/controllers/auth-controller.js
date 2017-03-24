@@ -4,20 +4,23 @@ const handlebars = handlebars || Handlebars;
 
 let authController = {
   //request data and views
-  get: function (views) {
+  get: function (dataService,views) {
     return {
       renderUI(){
-        authHelper.getCurrentUser()
+        authHelper.authenticateUser()
           .then(user => {
+            console.log(user);
             //magic...
             user.isAdmin = user.isAdmin === 'true';
+            user.notificationCount = user.notifications.length;
             views.get('nav-home')
               .then(template => {
                 let templateFunc = handlebars.compile(template);
                 let html = templateFunc(user);
                 $('.header').html(html);
                 eventHandler.navbarSearch();
-                eventHandler.navbarHide()
+                eventHandler.navbarHide();
+                eventHandler.userNotifications(dataService.notificationSeen,user.username)
               });
 
 
