@@ -1,4 +1,4 @@
-/*globals* requester*/
+/*globals requester*/
 const CACHED_TEMPLATES = {};
 let views = {
   get: function (name) {
@@ -6,7 +6,7 @@ let views = {
       return Promise.resolve(CACHED_TEMPLATES[name])
     }
 
-    let url = `views/templates/${name}.handlebars`;
+    let url = `../views/templates/${name}.handlebars`;
 
     let template = requester.get(url);
 
