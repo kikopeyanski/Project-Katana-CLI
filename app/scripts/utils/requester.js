@@ -5,7 +5,7 @@ let requester = {
     let promise = new Promise((resolve, reject) => {
       $.ajax({
         url,
-        method: "GET",
+        method: 'GET',
         success(response) {
           resolve(response);
         }
@@ -25,11 +25,11 @@ let requester = {
         headers: {
           'authorization': token
         },
-        method: "PUT",
+        method: 'PUT',
         async: true,
         cache: false,
         processData: false,
-        contentType: "application/json",
+        contentType: 'application/json',
         data: JSON.stringify(body),
         success(response) {
           resolve(response);
@@ -52,11 +52,11 @@ let requester = {
         headers: {
           'authorization': token
         },
-        method: "POST",
+        method: 'POST',
         async: true,
         cache: false,
         processData: false,
-        contentType: "application/json",
+        contentType: 'application/json',
         data: JSON.stringify(body),
         success(response) {
           resolve(response);
@@ -78,12 +78,12 @@ let requester = {
         headers: {
           'authorization': token
         },
-        method: "POST",
+        method: 'POST',
         data,
         contentType: false,
         async: true,
         cache: false,
-        enctype: "multipart/form-data",
+        enctype: 'multipart/form-data',
         processData: false,
         success(response) {
           resolve(response);
@@ -106,8 +106,8 @@ let requester = {
         beforeSend: function (xhr) {
           xhr.setRequestHeader('authorization', token);
         },
-        method: "GET",
-        contentType: "application/json",
+        method: 'GET',
+        contentType: 'application/json',
         success(response) {
           resolve(response);
         },

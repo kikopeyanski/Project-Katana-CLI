@@ -72,7 +72,7 @@ let courseController = {
                         $('.remove-course').removeClass('hide');
                         dataService.addCourseToUser(username, body)
                           .then(
-                            toastr["success"]('course ' + response.result.course.name + ' added  successfully')
+                            toastr['success']('course ' + response.result.course.name + ' added  successfully')
                           )
                           .catch(err => {
                             console.log(err);
@@ -85,7 +85,7 @@ let courseController = {
                         $('.add-course').removeClass('hide');
                         dataService.removeCourseFromUser(username, body)
                           .then(response => {
-                              toastr["warning"]('course removed successfully')
+                              toastr['warning']('course removed successfully')
                             }
                           )
                           .catch(err => {
@@ -129,7 +129,7 @@ let courseController = {
                                     comments.scrollTop($(comments)[0].scrollHeight);
                                   });
 
-                                $(this).find('textarea').val("");
+                                $(this).find('textarea').val('');
                               })
                               .catch(function () {
                                 console.log('error registering')

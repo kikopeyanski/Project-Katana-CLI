@@ -180,7 +180,7 @@ let eventHandler = {
               .then(response => {
                 console.log(response);
                 $(this).animate({
-                  backgroundColor: "#ffffff"
+                  backgroundColor: '#ffffff'
                 }, 1000);
               })
 
