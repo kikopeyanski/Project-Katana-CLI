@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="register-tests"
+    errors="0" failures="0" hostname="" id="" package="register-tests" skipped="0"
+    tests="3" time="13.98" timestamp="Sat, 25 Mar 2017 15:59:26 GMT">
+  
+    <testcase name="Register page shows form with all fields" classname="register-tests" time="3.847" assertions="9">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Register page shows password too short when password is too short and display passwords does not match when confirm password is different" classname="register-tests" time="4.084" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Register submit returns message when user with the same username is already registered" classname="register-tests" time="6.046" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>
