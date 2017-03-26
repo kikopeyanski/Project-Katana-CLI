@@ -4,16 +4,14 @@
       <h2>First Module</h2>
       <hr>
       {{#each this.firstModule}}
-        {{#if order}}
-        <div class="course">
+        {{#if isActive}}
+        <div class="course course-active">
+          <div class="course-active-notification">
+            <span>This course is active at the moment</span>
+          </div>
         {{else}}
-          <!--todo: change-->
         <div class="course">
         {{/if}}
-
-        <!--<div class="course-image">-->
-        <!--<img src="http://localhost:1337/image/{{image}}" alt="">-->
-        <!--</div>-->
         <div class="course-info">
           <a href="#/course/{{_id}}">{{name}}<br/></a>
           <span>{{track}}</span>
@@ -26,16 +24,14 @@
         <h2>Second Module</h2>
         <hr>
         {{#each this.secondModule}}
-          {{#if order}}
-          <div class="course">
+          {{#if isActive}}
+          <div class="course course-active">
+            <div class="course-active-notification">
+              <span>This course is active at the moment</span>
+            </div>
           {{else}}
-            <!--todo: change-->
           <div class="course">
           {{/if}}
-
-          <!--<div class="course-image">-->
-          <!--<img src="http://localhost:1337/image/{{image}}" alt="">-->
-          <!--</div>-->
           <div class="course-info">
             <a href="#/course/{{_id}}">{{name}}<br/></a>
             <span>{{track}}</span>
@@ -48,16 +44,15 @@
           <h2>Third Module</h2>
           <hr>
           {{#each this.thirdModule}}
-            {{#if order}}
-            <div class="course">
+            {{#if isActive}}
+            <div class="course course-active">
+              <div class="course-active-notification">
+                <span>This course is active at the moment</span>
+              </div>
             {{else}}
-              <!--todo: change-->
             <div class="course">
             {{/if}}
 
-            <!--<div class="course-image">-->
-            <!--<img src="http://localhost:1337/image/{{image}}" alt="">-->
-            <!--</div>-->
             <div class="course-info">
               <a href="#/course/{{_id}}">{{name}}<br/></a>
               <span>{{track}}</span>

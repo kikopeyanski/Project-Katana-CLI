@@ -16,10 +16,14 @@
             {{#each this.notifications}}
               <div id="{{_id}}" class="notification">
                 <p>Lecture <span class="lecture-name">{{lectureName}}</span> was added to course <a
-                  href="          {{courseId}}" class="course-name">{{course}}</a></p>
+                  href="{{courseId}}" class="course-name">{{course}}</a></p>
               </div>
               <hr>
             {{/each}}
+          </div>
+        {{else}}
+          <div class="notification-panel">
+            <div class="notification">No notifications</div>
           </div>
         {{/if}}
         <img class="icon" id="zoom-icon" src="images/zoom.png">
@@ -27,7 +31,19 @@
       </div>
     </div>
 {{/if}}
+{{#if this}}
+    <div class="navbar-user-settings">
 
+      <button class="user-settings-btn">
+        <a href="#/user-settings">
+          <img src="images/settings.png" alt="">
+
+          Settings
+
+        </a>
+      </button>
+    </div>
+{{/if}}
   <div class="navbar-user-panel">
     <div class="dropdown-menu">
       {{#if this}}

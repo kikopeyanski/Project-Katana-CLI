@@ -20,21 +20,66 @@ let userController = {
             return dataService.getUserPanel(params, user.username)
           })
           .then(response => {
-            console.log(response);
             let templateFunc = handlebars.compile(template);
             let html = templateFunc(response);
 
+            animation.stop();
+
+
+            $('.content').hide();
             $('.content').html(html);
+            $('.content').fadeIn('fast');
+
 
             calendarFunc(response.calendar);
+
+
           })
           .catch(err => {
             console.log(err);
+            animation.stop();
           });
 
-        animation.stop();
       },
-      userSettings(){
+      getUserCalendar(params){
+        animation.start();
+        let template;
+        views.get('user-calendar')
+          .then(response => {
+            template = response;
+            return authHelper.getCurrentUser()
+          })
+          .then(user => {
+            return dataService.getUserCalendar(params, user.username)
+          })
+          .then(response => {
+
+            let templateFunc = handlebars.compile(template);
+            let html = templateFunc();
+            $('.content').html(html);
+
+            let events = response.calendar;
+            $('#user-calendar').fullCalendar({
+              events: events.map((obj) => {
+                console.log(obj);
+                return {
+                  title: obj.lecture.name,
+                  start: obj.lecture.date,
+                  color: obj.course.color,
+                  allDay: true,
+                };
+              }),
+              contentHeight: 500,
+              aspectRatio: 2,
+              firstDay: 1
+
+            });
+            animation.stop();
+          })
+        //TODO;
+      },
+      userSettings()
+      {
         animation.start();
         let user;
         let template;
@@ -65,8 +110,10 @@ let userController = {
                 toastr['error'](err);
               })
           });
-      },
-      userAvatar(){
+      }
+      ,
+      userAvatar()
+      {
         animation.start();
         let template;
         let user;
@@ -85,8 +132,10 @@ let userController = {
             animation.stop();
           })
 
-      },
-      register() {
+      }
+      ,
+      register()
+      {
         animation.start();
         views.get('register')
           .then(template => {
@@ -99,8 +148,10 @@ let userController = {
             eventHandler.userRegisterFormSubmitEvent(dataService.register, dataService.login);
             animation.stop();
           });
-      },
-      login() {
+      }
+      ,
+      login()
+      {
         animation.start();
         views.get('login')
           .then(template => {
@@ -123,8 +174,10 @@ let userController = {
           .catch(err => {
             console.log(err)
           })
-      },
-      logout(){
+      }
+      ,
+      logout()
+      {
         window.localStorage.setItem('jwt-token', '');
         window.localStorage.removeItem('current-user-username');
         window.localStorage.removeItem('current-user-image');

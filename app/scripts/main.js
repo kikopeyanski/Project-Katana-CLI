@@ -16,13 +16,13 @@ router.use
 router
   .on(home.getHome)
   .on('/user-panel', user.getUserPanel)
+  .on('/user-calendar', user.getUserCalendar)
   .on('/user-settings', user.userSettings)
   .on('/user-settings/avatar', user.userAvatar)
   .on('/register', user.register)
   .on('/login', user.login)
   .on('/logout', user.logout)
   .on('/courses/all', course.getAllCourses)
-  .on('/course/:id/homework', course.getCourseHomework)
   .on('/course/:id', course.getCourseById)
   .on('/admin/courses/create', admin.createCourse)
   .resolve();

@@ -1,3 +1,5 @@
+@import "_variables";
+
 $sidebar-default-width: 108px;
 $sidebar-button-default-height: 100px;
 $sidebar-text-color: #6c747a;
@@ -9,35 +11,62 @@ $sidebar-default-color: #f4f4f4;
   max-width: $sidebar-default-width;
   margin: 0;
   overflow: visible;
-  color: $sidebar-text-color;
-  display: flex ;
-
+  display: flex;
+  font-size: 0.8rem;
   button {
     width: 100%;
     height: $sidebar-button-default-height;
     background-color: transparent;
     border: none;
     position: relative;
+    cursor: pointer;
 
     &.selected {
       background-color: #f58029;
-      color: white;
+      span{
+        color: white;
+      }
 
       &::after {
         content: url("../images/arrow.png");
         position: absolute;
+        top: 40%;
         right: -9px;
       }
     }
-  }
-
-  .sidebar-bottom-section {
-    bottom: 0;
-
-    button {
-      border-bottom: 1px solid lightgray;
+    span{
+      color: $font-color;
+      font-weight: bold;
     }
   }
+  button + button {
+    border-top: 1px solid $border-color-gray;
+  }
+  .button-pending {
+    flex-basis: 100%;
+  }
+  .button-calendar {
+    align-self: flex-end;
+  }
+}
+
+.sidebar-top-section {
+  align-self: flex-start;
+
+  button.button-calendar {
+    display: none;
+  }
+}
+
+.sidebar-bottom-section {
+  align-self: flex-end;
+}
+
+#sidebar-wrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
 @media (min-device-width: 1200px) and (max-device-width: 1600px) {
@@ -47,8 +76,8 @@ $sidebar-default-color: #f4f4f4;
 
 }
 
-@media (min-device-width: 320px) and (max-device-width: 640px) {
-  .container{
+@media (min-device-width: 320px) and (max-device-width: 768px) {
+  .container {
     margin-bottom: 10%;
   }
   .sidebar {
@@ -58,7 +87,8 @@ $sidebar-default-color: #f4f4f4;
     height: 8%;
     z-index: 1700;
 
-    #sidebar-wrapper{
+
+    #sidebar-wrapper {
       min-width: 100%;
     }
 
@@ -69,17 +99,29 @@ $sidebar-default-color: #f4f4f4;
       text-align: center;
       justify-content: center;
       font-size: 0.7rem;
-      span{
+
+      span {
         display: inline-block;
       }
       button {
+        padding: 2px;
         height: 100%;
         flex-basis: 40%;
 
-        &::after{
+        &::after {
           display: none;
+        }
+        &.button-calendar {
+          display: inline-block;
+        }
+        #img {
+          width: 32px;
+          height: 32px;
         }
       }
     }
+    @include border-glow(gray)
   }
 }
+
+

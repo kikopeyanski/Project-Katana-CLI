@@ -48,6 +48,38 @@
         &.not-found {
           opacity: 0.5;
         }
+        &.course-active{
+          @include border-glow(dodgerblue);
+          position: relative;
+
+          .course-active-notification{
+            opacity: 0;
+            width: 100px;
+            text-align: center;
+            border: 1px solid lightgray;
+            background-color: rgba(255,255,255,0.8);
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%,-50%);
+            border-radius: 5px;
+            visibility: hidden;
+            transition: visibility 0s, opacity 0.3s linear;
+
+          }
+
+          &:hover > .course-active-notification{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%,-50%);
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+
       }
       .course-image {
         flex-basis: 100%;

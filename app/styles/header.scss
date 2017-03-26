@@ -2,10 +2,9 @@
 
 .header {
   $border-radius: 4px;
-  $border-color: #ebeae9;
   $navbar-item-height: 75px;
 
-  border: 1px solid $border-color;
+  border: 1px solid $border-color-gray;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
 
@@ -15,6 +14,8 @@
   justify-content: center;
   align-content: center;
   position: relative;
+  font-size: 14px;
+  color: $font-color;
 
   .navbar-logo-wrapper {
     flex: 1;
@@ -96,14 +97,53 @@
       right: 3px;
     }
   }
-
-  .navbar-user-panel {
+  .navbar-user-settings {
     flex: 3 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid $border-color-gray;
+
+  }
+
+  .user-settings-btn {
+    background-color: $specific-orange-color;
+    color: white;
+    font-weight: bold;
+    border: 1px solid $specific-orange-color;
+    border-radius: 5px;
+    margin: 0 20px;
+
+    a {
+      display: flex;
+      padding: 5px 10px;
+      color: white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      transition: all 0.3s ease;
+      transform: scale(1.1);
+    }
+    &:hover a {
+      text-decoration: none;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  }
+  .navbar-user-panel {
+    flex: 4 auto;
     align-self: center;
 
     .user-username {
-      color: dimgray;
+      color: $font-color;
       font-weight: bold;
+
     }
     img {
       width: 40px;
@@ -112,21 +152,24 @@
       border-radius: 50%;
     }
     button {
-      border-left: 1px solid $border-color;
+      border-left: 1px solid $border-color-gray;
       height: $navbar-item-height;
       background-color: transparent;
       border-radius: 0;
+      &::after {
+        display: none;
+      }
     }
     .dropdown-menu {
       left: auto;
       right: 0;
       margin: 0;
       border-radius: 0 0 0 10px;
-      color: orangered;
+      color: $specific-orange-color;
     }
     &.show {
       button {
-        background-color: orangered;
+        background-color: $specific-orange-color;
       }
       .user-username {
         color: white;
@@ -144,19 +187,27 @@
 }
 
 @media (min-device-width: 320px) and (max-device-width: 640px) {
-  .navbar-logo-wrapper {
-    .navbar-logo {
-      margin-right: 0;
+  .header {
+    @include border-glow(lightgray);
+    .navbar-logo-wrapper {
+      .navbar-logo {
+        margin-right: 0;
+      }
+      &.logged-in {
+        display: none;
+      }
     }
-    &.logged-in {
+    .notification-panel {
+      min-width: 100vw;
+    }
+    .admin-course-add-lecture {
+      color: black;
+    }
+    .navbar-user-settings {
+
       display: none;
     }
-  }
-  .notification-panel {
-    min-width: 100vw;
-  }
-  .admin-course-add-lecture {
-    color: black;
+
   }
 
 }

@@ -2,5 +2,6 @@
 'use strict';
 
 let constants = {
-  serverUrl: 'https://floating-inlet-77532.herokuapp.com/'
+  serverUrl: 'http://localhost:1337/'
+  // serverUrl: 'https://floating-inlet-77532.herokuapp.com/'
 };

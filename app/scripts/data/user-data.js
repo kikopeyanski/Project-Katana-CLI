@@ -5,6 +5,9 @@ let userData = {
   getUserPanel: function (params, username) {
     return requester.getJSON(constants.serverUrl + 'api/users/user/' + username + '/courses');
   },
+  getUserCalendar: function (params,username) {
+    return requester.getJSON(constants.serverUrl + 'api/users/user/' + username + '/calendar');
+  },
   register: function (data) {
     return requester.postWithFile(constants.serverUrl + 'api/auth/register', data);
   },

@@ -4,15 +4,15 @@ const handlebars = handlebars || Handlebars;
 
 let authController = {
   //request data and views
-  get: function (dataService,views) {
+  get: function (dataService, views) {
     return {
       renderUI(){
         authHelper.authenticateUser()
           .then(user => {
-            console.log(user);
             //magic...
-            user.isAdmin = user.isAdmin === 'true';
+            user.isAdmin = user.roles.indexOf('admin') !== -1;
             user.notificationCount = user.notifications.length;
+            console.log(user);
             views.get('nav-home')
               .then(template => {
                 let templateFunc = handlebars.compile(template);
@@ -20,7 +20,7 @@ let authController = {
                 $('.header').html(html);
                 eventHandler.navbarSearch();
                 eventHandler.navbarHide();
-                eventHandler.userNotifications(dataService.notificationSeen,user.username)
+                eventHandler.userNotifications(dataService.notificationSeen, user.username)
               });
 
 
@@ -32,17 +32,35 @@ let authController = {
 
                 $('.button-completed').on('click', function () {
                   window.location = 'http://localhost:9000/#/user-panel';
-                  $('.button-pending').removeClass('selected');
+                  $('#sidebar-wrapper button').each(function () {
+                    $(this).removeClass('selected');
+                  });
                   $(this).addClass('selected');
                 });
 
                 $('.button-pending').on('click', function () {
                   window.location = 'http://localhost:9000/#/courses/all';
-                  $('.button-completed').removeClass('selected');
+                  $('#sidebar-wrapper button').each(function () {
+                    $(this).removeClass('selected');
+                  });
                   $(this).addClass('selected');
                 });
+
+                $('.button-calendar').on('click', function () {
+                  window.location = 'http://localhost:9000/#/user-calendar';
+                  $('#sidebar-wrapper button').each(function () {
+                    $(this).removeClass('selected');
+                  });
+                  $(this).addClass('selected');
+                })
+                $('.button-logout').on('click', function () {
+                  window.location = 'http://localhost:9000/#/logout';
+                  $('.sidebar').css('display', 'none');
+
+                })
               });
-            $('.sidebar').css('display', 'block')
+            $('.sidebar').css('display', 'block');
+            // window.location.replace('#/user-panel');
           })
           .catch(user => {
             views.get('nav-home')
@@ -53,7 +71,8 @@ let authController = {
 
                 eventHandler.navbarHide();
 
-                $('.sidebar').css('display', 'none')
+                $('.sidebar').css('display', 'none');
+                window.location.replace('#/login');
               });
 
           })

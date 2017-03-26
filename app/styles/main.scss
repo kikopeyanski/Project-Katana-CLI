@@ -26,6 +26,9 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
+body > div{
+  transition:all 0.3s ease;
+}
 
 .container {
   height: 100%;
