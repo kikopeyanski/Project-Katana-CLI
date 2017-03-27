@@ -136,10 +136,6 @@ let eventHandler = {
             $(this).removeClass('found');
             $(this).addClass('not-found');
           }
-
-          // if ($(`${course} span`).val().indexOf(searchBar.val()) !== -1) {
-          //   $(`${course}`).css('border-colo', 'red');
-          // }
         })
       })
     },
