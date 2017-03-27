@@ -74,7 +74,7 @@ let eventHandler = {
           actionRegister(data)
             .then((response) => {
               animation.stop();
-              window.location.replace('/#/login');
+              window.location.replace('Project-Katana/#/login');
               toastr['success'](response.message);
             })
             .catch((err) => {

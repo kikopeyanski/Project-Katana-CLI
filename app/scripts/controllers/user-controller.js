@@ -168,7 +168,7 @@ let userController = {
             window.localStorage.setItem('current-user-admin', response.isAdmin);
             window.localStorage.setItem('current-user-id', response._id);
             window.localStorage.setItem('jwt-token', response.token);
-            window.location.replace('/#/user-panel');
+            window.location.replace('#/user-panel');
             auth.renderUI();
           })
           .catch(err => {
@@ -183,7 +183,7 @@ let userController = {
         window.localStorage.removeItem('current-user-image');
         window.localStorage.removeItem('current-user-admin');
         window.localStorage.removeItem('current-user-id');
-        window.location.replace('/#');
+        window.location.replace('#');
         auth.renderUI();
       }
     }

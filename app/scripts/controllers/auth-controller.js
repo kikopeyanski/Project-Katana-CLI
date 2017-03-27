@@ -31,7 +31,7 @@ let authController = {
                 $('.sidebar').html(html);
 
                 $('.button-completed').on('click', function () {
-                  window.location = 'http://localhost:9000/#/user-panel';
+                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/user-panel';
                   $('#sidebar-wrapper button').each(function () {
                     $(this).removeClass('selected');
                   });
@@ -39,7 +39,7 @@ let authController = {
                 });
 
                 $('.button-pending').on('click', function () {
-                  window.location = 'http://localhost:9000/#/courses/all';
+                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/courses/all';
                   $('#sidebar-wrapper button').each(function () {
                     $(this).removeClass('selected');
                   });
@@ -47,14 +47,14 @@ let authController = {
                 });
 
                 $('.button-calendar').on('click', function () {
-                  window.location = 'http://localhost:9000/#/user-calendar';
+                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/user-calendar';
                   $('#sidebar-wrapper button').each(function () {
                     $(this).removeClass('selected');
                   });
                   $(this).addClass('selected');
-                })
+                });
                 $('.button-logout').on('click', function () {
-                  window.location = 'http://localhost:9000/#/logout';
+                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/logout';
                   $('.sidebar').css('display', 'none');
 
                 })
