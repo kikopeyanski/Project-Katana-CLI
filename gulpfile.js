@@ -97,7 +97,7 @@ gulp.task('extras', () => {
 
 gulp.task('handlebars', () => {
   return gulp.src([
-    'app/views/templates/*.handlebars'
+    'app/views/*.handlebars'
   ])
     .pipe(gulp.dest('dist/views'));
 });

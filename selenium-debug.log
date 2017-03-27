@@ -1,300 +1,232 @@
-11:43:56.251 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
-11:43:56.253 INFO - Launching a standalone Selenium Server
-2017-03-26 11:43:56.297:INFO::main: Logging initialized @432ms to org.seleniumhq.jetty9.util.log.StdErrLog
-11:43:56.349 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-11:43:56.349 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+15:23:58.459 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
+15:23:58.459 INFO - Launching a standalone Selenium Server
+2017-03-27 15:23:58.475:INFO::main: Logging initialized @189ms to org.seleniumhq.jetty9.util.log.StdErrLog
+15:23:58.521 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:23:58.521 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-11:43:56.349 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-11:43:56.349 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-11:43:56.354 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+15:23:58.521 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:23:58.521 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+15:23:58.521 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
-2017-03-26 11:43:56.408:INFO:osjs.Server:main: jetty-9.2.20.v20161216
-2017-03-26 11:43:56.437:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@5cb137{/,null,AVAILABLE}
-2017-03-26 11:43:56.788:INFO:osjs.AbstractConnector:main: Started ServerConnector@1993335{HTTP/1.1,[http/1.1]}{0.0.0.0:1337}
-2017-03-26 11:43:56.788:INFO:osjs.Server:main: Started @923ms
-11:43:56.788 INFO - Selenium Server is up and running
-11:43:58.226 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-11:43:58.256 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:43:58.266 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 46304
+2017-03-27 15:23:58.553:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2017-03-27 15:23:58.584:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@5cb137{/,null,AVAILABLE}
+2017-03-27 15:23:58.693:INFO:osjs.AbstractConnector:main: Started ServerConnector@1993335{HTTP/1.1,[http/1.1]}{0.0.0.0:1337}
+2017-03-27 15:23:58.693:INFO:osjs.Server:main: Started @408ms
+15:23:58.693 INFO - Selenium Server is up and running
+15:23:59.070 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+15:23:59.086 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:23:59.102 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 44109
 Only local connections are allowed.
-11:44:01.240 INFO - Detected dialect: OSS
-11:44:01.255 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:01.273 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:02.217 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:02.229 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:02.266 INFO - Done: [find elements: By.cssSelector: body]
-11:44:02.270 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: body]])
-11:44:02.288 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: body]]
-11:44:02.296 INFO - Executing: [find element: By.cssSelector: .login-form])
-11:44:02.316 INFO - Done: [find element: By.cssSelector: .login-form]
-11:44:02.319 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: .login-form]])
-11:44:02.348 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: .login-form]]
-11:44:02.352 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:02.371 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:02.379 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: input[type=text]#username]])
-11:44:02.398 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: input[type=text]#username]]
-11:44:02.402 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:02.420 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:02.424 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: input[type=password]#password]])
-11:44:02.445 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: input[type=password]#password]]
-11:44:02.449 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
-11:44:02.469 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
-11:44:02.472 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: input[type=submit]#login-submit]])
-11:44:02.492 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (0cc2e43dcf26aa9fc139de6b57b6238b)] -> css selector: input[type=submit]#login-submit]]
-11:44:02.499 INFO - Executing: [delete session: 78576ed9-2f35-4e57-b18e-1dc705023e96])
-11:44:03.436 INFO - Done: [delete session: 78576ed9-2f35-4e57-b18e-1dc705023e96]
-11:44:03.450 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:44:03.451 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 43086
+15:24:01.315 INFO - Detected dialect: OSS
+15:24:01.331 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:24:01.331 INFO - Executing: [get: http://localhost:9000/#/login])
+15:24:02.154 INFO - Done: [get: http://localhost:9000/#/login]
+15:24:02.163 INFO - Executing: [find elements: By.cssSelector: body])
+15:24:02.197 INFO - Done: [find elements: By.cssSelector: body]
+15:24:02.201 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: body]])
+15:24:02.216 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: body]]
+15:24:02.222 INFO - Executing: [find element: By.cssSelector: .login-form])
+15:24:02.238 INFO - Done: [find element: By.cssSelector: .login-form]
+15:24:02.242 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: .login-form]])
+15:24:02.260 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: .login-form]]
+15:24:02.266 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
+15:24:02.276 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
+15:24:02.276 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: input[type=text]#username]])
+15:24:02.305 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: input[type=text]#username]]
+15:24:02.310 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
+15:24:02.325 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
+15:24:02.325 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: input[type=password]#password]])
+15:24:02.341 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: input[type=password]#password]]
+15:24:02.341 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
+15:24:02.358 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
+15:24:02.358 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: input[type=submit]#login-submit]])
+15:24:02.386 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (cb3b2252530b6a0fab700de08867f324)] -> css selector: input[type=submit]#login-submit]]
+15:24:02.391 INFO - Executing: [delete session: 5b31efe0-b4a5-4d53-9ffc-f4ddb2e3ebd4])
+15:24:03.101 INFO - Done: [delete session: 5b31efe0-b4a5-4d53-9ffc-f4ddb2e3ebd4]
+15:24:03.101 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:24:03.101 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 18461
 Only local connections are allowed.
-11:44:05.330 INFO - Detected dialect: OSS
-11:44:05.332 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:05.336 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:06.187 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:06.197 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:06.221 INFO - Done: [find elements: By.cssSelector: body]
-11:44:06.224 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: body]])
-11:44:06.241 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: body]]
-11:44:06.247 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:06.266 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:06.270 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: input[type=text]#username], [D, e, f, i, n, i, t, e, l, y,  , a, n,  , i, n, v, a, l, i, d,  , u, s, e, r, n, a, m, e]])
-11:44:06.433 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: input[type=text]#username], [D, e, f, i, n, i, t, e, l, y,  , a, n,  , i, n, v, a, l, i, d,  , u, s, e, r, n, a, m, e]]
-11:44:06.436 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:06.465 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:06.468 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:06.576 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:06.584 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
-11:44:06.612 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
-11:44:06.618 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: input[type=submit]#login-submit]])
-11:44:06.700 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: input[type=submit]#login-submit]]
-11:44:08.705 INFO - Executing: [find element: By.cssSelector: .toast-message])
-11:44:08.725 INFO - Done: [find element: By.cssSelector: .toast-message]
-11:44:08.730 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: .toast-message]])
-11:44:08.752 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (89d0f66d69b1e0ac9ffde152301fb748)] -> css selector: .toast-message]]
-11:44:08.755 INFO - Executing: [delete session: f04913ad-c434-4a9c-84d6-361689cc1080])
-11:44:09.485 INFO - Done: [delete session: f04913ad-c434-4a9c-84d6-361689cc1080]
-11:44:09.496 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:44:09.497 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 40897
+15:24:04.966 INFO - Detected dialect: OSS
+15:24:04.966 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:24:04.981 INFO - Executing: [get: http://localhost:9000/#/login])
+15:24:06.669 INFO - Done: [get: http://localhost:9000/#/login]
+15:24:06.676 INFO - Executing: [find elements: By.cssSelector: body])
+15:24:06.695 INFO - Done: [find elements: By.cssSelector: body]
+15:24:06.698 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: body]])
+15:24:06.712 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: body]]
+15:24:06.716 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
+15:24:06.726 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
+15:24:06.726 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: input[type=text]#username], [D, e, f, i, n, i, t, e, l, y,  , a, n,  , i, n, v, a, l, i, d,  , u, s, e, r, n, a, m, e]])
+15:24:06.837 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: input[type=text]#username], [D, e, f, i, n, i, t, e, l, y,  , a, n,  , i, n, v, a, l, i, d,  , u, s, e, r, n, a, m, e]]
+15:24:06.842 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
+15:24:06.858 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
+15:24:06.861 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]])
+15:24:06.916 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]]
+15:24:06.919 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
+15:24:06.937 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
+15:24:06.940 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: input[type=submit]#login-submit]])
+15:24:06.984 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: input[type=submit]#login-submit]]
+15:24:08.989 INFO - Executing: [find element: By.cssSelector: .toast-message])
+15:24:09.007 INFO - Done: [find element: By.cssSelector: .toast-message]
+15:24:09.010 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: .toast-message]])
+15:24:09.028 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (dea5ea647deb5194aa4daf5437382890)] -> css selector: .toast-message]]
+15:24:09.032 INFO - Executing: [delete session: 929a5b18-a585-47f6-90f3-c34fd4df5646])
+15:24:09.833 INFO - Done: [delete session: 929a5b18-a585-47f6-90f3-c34fd4df5646]
+15:24:09.848 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:24:09.864 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 7606
 Only local connections are allowed.
-11:44:11.363 INFO - Detected dialect: OSS
-11:44:11.365 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:11.368 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:12.084 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:12.089 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:12.124 INFO - Done: [find elements: By.cssSelector: body]
-11:44:12.131 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: body]])
-11:44:12.149 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: body]]
-11:44:12.154 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:12.174 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:12.179 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:12.270 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:12.273 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:12.299 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:12.301 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: input[type=password]#password], [i, n, v]])
-11:44:12.353 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: input[type=password]#password], [i, n, v]]
-11:44:12.355 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
-11:44:12.382 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
-11:44:12.385 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: input[type=submit]#login-submit]])
-11:44:12.451 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: input[type=submit]#login-submit]]
-11:44:14.455 INFO - Executing: [find element: By.cssSelector: .toast-message])
-11:44:14.475 INFO - Done: [find element: By.cssSelector: .toast-message]
-11:44:14.480 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: .toast-message]])
-11:44:14.501 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: .toast-message]]
-11:44:14.505 INFO - Executing: [find element: By.cssSelector: .toast-message])
-11:44:14.517 INFO - Done: [find element: By.cssSelector: .toast-message]
-11:44:14.520 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: .toast-message]])
-11:44:14.544 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (c6d28fc8761750715a2f39aaf05d94a2)] -> css selector: .toast-message]]
-11:44:14.549 INFO - Executing: [delete session: 048be029-dfea-4e07-a6fe-ad4b5125af3d])
-11:44:15.279 INFO - Done: [delete session: 048be029-dfea-4e07-a6fe-ad4b5125af3d]
-11:44:15.287 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:44:15.288 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 13662
+15:24:11.798 INFO - Detected dialect: OSS
+15:24:11.813 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:24:11.813 INFO - Executing: [get: http://localhost:9000/#/login])
+15:24:12.856 INFO - Done: [get: http://localhost:9000/#/login]
+15:24:12.860 INFO - Executing: [find elements: By.cssSelector: body])
+15:24:12.879 INFO - Done: [find elements: By.cssSelector: body]
+15:24:12.882 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: body]])
+15:24:12.899 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: body]]
+15:24:12.904 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
+15:24:12.921 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
+15:24:12.924 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]])
+15:24:12.992 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]]
+15:24:12.995 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
+15:24:13.012 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
+15:24:13.015 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: input[type=password]#password], [i, n, v]])
+15:24:13.059 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: input[type=password]#password], [i, n, v]]
+15:24:13.062 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
+15:24:13.080 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
+15:24:13.082 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: input[type=submit]#login-submit]])
+15:24:13.128 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: input[type=submit]#login-submit]]
+15:24:15.131 INFO - Executing: [find element: By.cssSelector: .toast-message])
+15:24:15.178 INFO - Done: [find element: By.cssSelector: .toast-message]
+15:24:15.178 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: .toast-message]])
+15:24:15.209 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: .toast-message]]
+15:24:15.209 INFO - Executing: [find element: By.cssSelector: .toast-message])
+15:24:15.225 INFO - Done: [find element: By.cssSelector: .toast-message]
+15:24:15.225 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: .toast-message]])
+15:24:15.240 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (6d47b9ca46c38493e5a4cdce7817d764)] -> css selector: .toast-message]]
+15:24:15.240 INFO - Executing: [delete session: cc21e042-dc44-40f2-aed5-276bbf8888a8])
+15:24:15.990 INFO - Done: [delete session: cc21e042-dc44-40f2-aed5-276bbf8888a8]
+15:24:16.022 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:24:16.022 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 37840
 Only local connections are allowed.
-11:44:17.190 INFO - Detected dialect: OSS
-11:44:17.193 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:17.198 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:17.907 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:17.919 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:17.944 INFO - Done: [find elements: By.cssSelector: body]
-11:44:17.948 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: body]])
-11:44:17.966 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: body]]
-11:44:17.969 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:17.988 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:17.994 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:18.085 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:18.088 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:18.113 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:18.116 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:18.197 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:18.202 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
-11:44:18.222 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
-11:44:18.228 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: input[type=submit]#login-submit]])
-11:44:18.284 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: input[type=submit]#login-submit]]
-11:44:21.292 INFO - Executing: [get current url])
-11:44:21.313 INFO - Done: [get current url]
-11:44:21.320 INFO - Executing: [find element: By.cssSelector: .user-username])
-11:44:21.350 INFO - Done: [find element: By.cssSelector: .user-username]
-11:44:21.353 INFO - Executing: [get text: 4 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: .user-username]])
-11:44:21.375 INFO - Done: [get text: 4 [[ChromeDriver: chrome on XP (44008fcdb7a3fc2b925fe74f6e5051c2)] -> css selector: .user-username]]
-11:44:21.381 INFO - Executing: [delete session: c5e23b93-e689-4f1d-a99a-41da4d5a6b03])
-11:44:22.099 INFO - Done: [delete session: c5e23b93-e689-4f1d-a99a-41da4d5a6b03]
-11:44:22.133 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:44:22.135 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 13632
+15:24:17.955 INFO - Detected dialect: OSS
+15:24:17.955 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=loginTests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:24:17.971 INFO - Executing: [get: http://localhost:9000/#/login])
+15:24:18.852 INFO - Done: [get: http://localhost:9000/#/login]
+15:24:18.857 INFO - Executing: [find elements: By.cssSelector: body])
+15:24:18.875 INFO - Done: [find elements: By.cssSelector: body]
+15:24:18.878 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: body]])
+15:24:18.893 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: body]]
+15:24:18.896 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
+15:24:18.914 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
+15:24:18.916 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]])
+15:24:18.981 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]]
+15:24:18.984 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
+15:24:19.003 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
+15:24:19.006 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]])
+15:24:19.073 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]]
+15:24:19.076 INFO - Executing: [find element: By.cssSelector: input[type=submit]#login-submit])
+15:24:19.094 INFO - Done: [find element: By.cssSelector: input[type=submit]#login-submit]
+15:24:19.097 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: input[type=submit]#login-submit]])
+15:24:19.144 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (a488be21f99085c26735a2b0ff02b11b)] -> css selector: input[type=submit]#login-submit]]
+15:24:22.152 INFO - Executing: [get current url])
+15:24:22.168 INFO - Done: [get current url]
+15:24:22.186 INFO - Executing: [delete session: 43ac62d6-06c4-43bf-a34d-f00677af1c72])
+15:24:22.982 INFO - Done: [delete session: 43ac62d6-06c4-43bf-a34d-f00677af1c72]
+15:24:23.021 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+15:24:23.023 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 8984
 Only local connections are allowed.
-11:44:24.003 INFO - Detected dialect: OSS
-11:44:24.005 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:24.009 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:24.763 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:24.769 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:24.820 INFO - Done: [find elements: By.cssSelector: body]
-11:44:24.823 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: body]])
-11:44:24.840 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: body]]
-11:44:24.847 INFO - Executing: [find element: By.cssSelector: #register-form-link])
-11:44:24.867 INFO - Done: [find element: By.cssSelector: #register-form-link]
-11:44:24.872 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: #register-form-link]])
-11:44:24.935 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: #register-form-link]]
-11:44:24.939 INFO - Executing: [find elements: By.cssSelector: form#user-create-user])
-11:44:24.971 INFO - Done: [find elements: By.cssSelector: form#user-create-user]
-11:44:24.975 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: form#user-create-user]])
-11:44:24.997 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: form#user-create-user]]
-11:44:25.001 INFO - Executing: [find element: By.cssSelector: #user-create-user])
-11:44:25.021 INFO - Done: [find element: By.cssSelector: #user-create-user]
-11:44:25.023 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: form#user-create-user]])
-11:44:25.034 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: form#user-create-user]]
-11:44:25.038 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:25.056 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:25.062 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=text]#username]])
-11:44:25.082 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=text]#username]]
-11:44:25.086 INFO - Executing: [find element: By.cssSelector: input[type=email]#email])
-11:44:25.105 INFO - Done: [find element: By.cssSelector: input[type=email]#email]
-11:44:25.114 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=email]#email]])
-11:44:25.133 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=email]#email]]
-11:44:25.137 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:25.157 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:25.162 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=password]#password]])
-11:44:25.181 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=password]#password]]
-11:44:25.184 INFO - Executing: [find element: By.cssSelector: input[type=password]#confirm-password])
-11:44:25.203 INFO - Done: [find element: By.cssSelector: input[type=password]#confirm-password]
-11:44:25.206 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=password]#confirm-password]])
-11:44:25.226 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=password]#confirm-password]]
-11:44:25.233 INFO - Executing: [find element: By.cssSelector: input[type=file]#image])
-11:44:25.252 INFO - Done: [find element: By.cssSelector: input[type=file]#image]
-11:44:25.255 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=file]#image]])
-11:44:25.272 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: input[type=file]#image]]
-11:44:25.277 INFO - Executing: [find element: By.cssSelector: button#user-create-user-btn])
-11:44:25.301 INFO - Done: [find element: By.cssSelector: button#user-create-user-btn]
-11:44:25.304 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: button#user-create-user-btn]])
-11:44:25.322 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on XP (23f80b691fcfe181c74fa213017cb2af)] -> css selector: button#user-create-user-btn]]
-11:44:25.328 INFO - Executing: [delete session: 2c7ea0bd-5e41-4ef3-8a1a-cfb48de22606])
-11:44:26.052 INFO - Done: [delete session: 2c7ea0bd-5e41-4ef3-8a1a-cfb48de22606]
-11:44:26.066 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:44:26.067 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 34805
-Only local connections are allowed.
-11:44:27.990 INFO - Detected dialect: OSS
-11:44:27.992 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:27.997 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:28.703 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:28.710 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:28.736 INFO - Done: [find elements: By.cssSelector: body]
-11:44:28.738 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: body]])
-11:44:28.765 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: body]]
-11:44:28.768 INFO - Executing: [find element: By.cssSelector: #register-form-link])
-11:44:28.788 INFO - Done: [find element: By.cssSelector: #register-form-link]
-11:44:28.792 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: #register-form-link]])
-11:44:28.856 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: #register-form-link]]
-11:44:28.862 INFO - Executing: [find elements: By.cssSelector: form#user-create-user])
-11:44:28.893 INFO - Done: [find elements: By.cssSelector: form#user-create-user]
-11:44:28.898 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: form#user-create-user]])
-11:44:28.921 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: form#user-create-user]]
-11:44:28.925 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:28.946 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:28.949 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:29.040 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:29.047 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:29.070 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:29.073 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#password], [p, s, w]])
-11:44:29.132 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#password], [p, s, w]]
-11:44:29.134 INFO - Executing: [find element: By.cssSelector: input[type=password]#confirm-password])
-11:44:29.156 INFO - Done: [find element: By.cssSelector: input[type=password]#confirm-password]
-11:44:29.163 INFO - Executing: [click: 5 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#confirm-password]])
-11:44:29.218 INFO - Done: [click: 5 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#confirm-password]]
-11:44:29.221 INFO - Executing: [find elements: By.cssSelector: .password-input div.form-control-feedback])
-11:44:29.249 INFO - Done: [find elements: By.cssSelector: .password-input div.form-control-feedback]
-11:44:29.252 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .password-input div.form-control-feedback]])
-11:44:29.299 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .password-input div.form-control-feedback]]
-11:44:29.303 INFO - Executing: [find element: By.cssSelector: .password-input div.form-control-feedback])
-11:44:29.323 INFO - Done: [find element: By.cssSelector: .password-input div.form-control-feedback]
-11:44:29.330 INFO - Executing: [get text: 6 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .password-input div.form-control-feedback]])
-11:44:29.352 INFO - Done: [get text: 6 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .password-input div.form-control-feedback]]
-11:44:29.355 INFO - Executing: [find element: By.cssSelector: input[type=password]#confirm-password])
-11:44:29.367 INFO - Done: [find element: By.cssSelector: input[type=password]#confirm-password]
-11:44:29.370 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#confirm-password], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:29.433 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#confirm-password], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:29.435 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:29.446 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:29.449 INFO - Executing: [click: 4 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#password]])
-11:44:29.497 INFO - Done: [click: 4 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: input[type=password]#password]]
-11:44:29.501 INFO - Executing: [find elements: By.cssSelector: .confirm-password-input div.form-control-feedback])
-11:44:29.521 INFO - Done: [find elements: By.cssSelector: .confirm-password-input div.form-control-feedback]
-11:44:29.525 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .confirm-password-input div.form-control-feedback]])
-11:44:29.547 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .confirm-password-input div.form-control-feedback]]
-11:44:29.551 INFO - Executing: [find element: By.cssSelector: .confirm-password-input div.form-control-feedback])
-11:44:29.572 INFO - Done: [find element: By.cssSelector: .confirm-password-input div.form-control-feedback]
-11:44:29.575 INFO - Executing: [get text: 7 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .confirm-password-input div.form-control-feedback]])
-11:44:29.600 INFO - Done: [get text: 7 [[ChromeDriver: chrome on XP (79064a2650d2940ede50dfef837d675e)] -> css selector: .confirm-password-input div.form-control-feedback]]
-11:44:29.603 INFO - Executing: [delete session: aa07e0ea-63dc-422f-8105-1e318e7c845f])
-11:44:30.318 INFO - Done: [delete session: aa07e0ea-63dc-422f-8105-1e318e7c845f]
-11:44:30.326 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
-11:44:30.328 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
-Starting ChromeDriver 2.28.455520 (cc17746adff54984afff480136733114c6b3704b) on port 38427
-Only local connections are allowed.
-11:44:32.220 INFO - Detected dialect: OSS
-11:44:32.221 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
-11:44:32.236 INFO - Executing: [get: http://localhost:9000/#/login])
-11:44:32.981 INFO - Done: [get: http://localhost:9000/#/login]
-11:44:32.984 INFO - Executing: [find elements: By.cssSelector: body])
-11:44:33.015 INFO - Done: [find elements: By.cssSelector: body]
-11:44:33.017 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: body]])
-11:44:33.035 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: body]]
-11:44:33.041 INFO - Executing: [find element: By.cssSelector: #register-form-link])
-11:44:33.063 INFO - Done: [find element: By.cssSelector: #register-form-link]
-11:44:33.065 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: #register-form-link]])
-11:44:33.127 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: #register-form-link]]
-11:44:33.133 INFO - Executing: [find elements: By.cssSelector: form#user-create-user])
-11:44:33.164 INFO - Done: [find elements: By.cssSelector: form#user-create-user]
-11:44:33.167 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: form#user-create-user]])
-11:44:33.190 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: form#user-create-user]]
-11:44:33.196 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
-11:44:33.216 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
-11:44:33.219 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:33.301 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=text]#username], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:33.304 INFO - Executing: [find element: By.cssSelector: input[type=email]#email])
-11:44:33.325 INFO - Done: [find element: By.cssSelector: input[type=email]#email]
-11:44:33.331 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=email]#email], [k, i, k, o, p, e, y, a, n, s, k, i, @, a, b, v, ., b, g]])
-11:44:33.436 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=email]#email], [k, i, k, o, p, e, y, a, n, s, k, i, @, a, b, v, ., b, g]]
-11:44:33.439 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
-11:44:33.464 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
-11:44:33.467 INFO - Executing: [send keys: 5 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:33.565 INFO - Done: [send keys: 5 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=password]#password], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:33.568 INFO - Executing: [find element: By.cssSelector: input[type=password]#confirm-password])
-11:44:33.586 INFO - Done: [find element: By.cssSelector: input[type=password]#confirm-password]
-11:44:33.589 INFO - Executing: [send keys: 6 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=password]#confirm-password], [k, i, k, o, p, e, y, a, n, s, k, i]])
-11:44:33.665 INFO - Done: [send keys: 6 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: input[type=password]#confirm-password], [k, i, k, o, p, e, y, a, n, s, k, i]]
-11:44:33.668 INFO - Executing: [find element: By.cssSelector: button#user-create-user-btn])
-11:44:33.687 INFO - Done: [find element: By.cssSelector: button#user-create-user-btn]
-11:44:33.690 INFO - Executing: [click: 7 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: button#user-create-user-btn]])
-11:44:33.755 INFO - Done: [click: 7 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: button#user-create-user-btn]]
-11:44:35.763 INFO - Executing: [find elements: By.cssSelector: .toast-message])
-11:44:35.784 INFO - Done: [find elements: By.cssSelector: .toast-message]
-11:44:35.786 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: .toast-message]])
-11:44:35.806 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: .toast-message]]
-11:44:35.813 INFO - Executing: [find element: By.cssSelector: .toast-message])
-11:44:35.834 INFO - Done: [find element: By.cssSelector: .toast-message]
-11:44:35.837 INFO - Executing: [get text: 8 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: .toast-message]])
-11:44:35.859 INFO - Done: [get text: 8 [[ChromeDriver: chrome on XP (d73f1c483194e21a875116c741e31460)] -> css selector: .toast-message]]
-11:44:35.863 INFO - Executing: [delete session: 3d3b922c-872a-4b52-8743-f1389f29ae3c])
-11:44:36.580 INFO - Done: [delete session: 3d3b922c-872a-4b52-8743-f1389f29ae3c]
+15:24:24.955 INFO - Detected dialect: OSS
+15:24:24.958 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Register Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+15:24:24.962 INFO - Executing: [get: http://localhost:9000/#/login])
+15:24:25.905 INFO - Done: [get: http://localhost:9000/#/login]
+15:24:25.912 INFO - Executing: [find elements: By.cssSelector: body])
+15:24:25.937 INFO - Done: [find elements: By.cssSelector: body]
+15:24:25.940 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: body]])
+15:24:25.954 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: body]]
+15:24:25.959 INFO - Executing: [find element: By.cssSelector: #register-form-link])
+15:24:25.977 INFO - Done: [find element: By.cssSelector: #register-form-link]
+15:24:25.979 INFO - Executing: [click: 1 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: #register-form-link]])
+15:24:26.032 INFO - Done: [click: 1 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: #register-form-link]]
+15:24:26.037 INFO - Executing: [find elements: By.cssSelector: form#user-create-user])
+15:24:26.061 INFO - Done: [find elements: By.cssSelector: form#user-create-user]
+15:24:26.064 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: form#user-create-user]])
+15:24:26.081 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: form#user-create-user]]
+15:24:26.087 INFO - Executing: [find element: By.cssSelector: #user-create-user])
+15:24:26.104 INFO - Done: [find element: By.cssSelector: #user-create-user]
+15:24:26.107 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: form#user-create-user]])
+15:24:26.115 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: form#user-create-user]]
+15:24:26.119 INFO - Executing: [find element: By.cssSelector: input[type=text]#username])
+15:24:26.135 INFO - Done: [find element: By.cssSelector: input[type=text]#username]
+15:24:26.138 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=text]#username]])
+15:24:26.154 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=text]#username]]
+15:24:26.158 INFO - Executing: [find element: By.cssSelector: input[type=email]#email])
+15:24:26.176 INFO - Done: [find element: By.cssSelector: input[type=email]#email]
+15:24:26.179 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=email]#email]])
+15:24:26.195 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=email]#email]]
+15:24:26.199 INFO - Executing: [find element: By.cssSelector: input[type=password]#password])
+15:24:26.216 INFO - Done: [find element: By.cssSelector: input[type=password]#password]
+15:24:26.218 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=password]#password]])
+15:24:26.234 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=password]#password]]
+15:24:26.239 INFO - Executing: [find element: By.cssSelector: input[type=password]#confirm-password])
+15:24:26.258 INFO - Done: [find element: By.cssSelector: input[type=password]#confirm-password]
+15:24:26.261 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=password]#confirm-password]])
+15:24:26.278 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=password]#confirm-password]]
+15:24:26.281 INFO - Executing: [find element: By.cssSelector: input[type=file]#image])
+15:24:26.300 INFO - Done: [find element: By.cssSelector: input[type=file]#image]
+15:24:26.302 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=file]#image]])
+15:24:26.333 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on XP (c43f2a6b2b75c24a5cb0cb173bf5458b)] -> css selector: input[type=file]#image]]
+15:24:26.339 INFO - Executing: [find element: By.cssSelector: button#user-create-user-btn])
+15:24:27.139 WARN - Exception thrown
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"button#user-create-user-btn"}
+  (Session info: chrome=58.0.3029.33)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'DESKTOP-K6PNH2K', ip: '192.168.1.141', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\AYYAVA~1\AppData\Local\Temp\scoped_dir984_10542}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.33, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: c43f2a6b2b75c24a5cb0cb173bf5458b
+*** Element info: {Using=css selector, value=button#user-create-user-btn}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:468)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy4.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+15:24:27.141 WARN - Exception: no such element: Unable to locate element: {"method":"css selector","selector":"button#user-create-user-btn"}
+  (Session info: chrome=58.0.3029.33)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'DESKTOP-K6PNH2K', ip: '192.168.1.141', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\AYYAVA~1\AppData\Local\Temp\scoped_dir984_10542}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.33, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: c43f2a6b2b75c24a5cb0cb173bf5458b
+*** Element info: {Using=css selector, value=button#user-create-user-btn}
+15:24:27.246 INFO - Executing: [delete session: 44bae243-dcbe-4965-9172-ce7d078d9df8])
+15:24:27.996 INFO - Done: [delete session: 44bae243-dcbe-4965-9172-ce7d078d9df8]

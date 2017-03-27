@@ -122,7 +122,7 @@ let eventHandler = {
         searchBar.focus();
       });
       searchBar.on('input', function (ev) {
-        window.location.replace('/#/courses/all');
+        window.location.replace('#/courses/all');
         $('.course').each(function () {
           let courseData = $(this).find('.course-info').find('a').html().toLowerCase().indexOf(searchBar.val().toLowerCase());
           if (courseData !== -1
