@@ -1,3 +1,5 @@
+@import "_variables";
+
 .course-info-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +161,7 @@
       }
       button#comment-post-comment {
         flex-basis: 30%;
-        background-color: #01ff70;
+        background-color: $specific-orange-color;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }

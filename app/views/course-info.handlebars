@@ -58,7 +58,7 @@
       {{#if result.course.comments}}
         {{#each result.course.comments}}
           <div class="comment">
-            <img src="http://localhost:1337/image/{{this.user.avatar}}" alt="">
+            <img src="https://floating-inlet-77532.herokuapp.com/image/{{this.user.avatar}}" alt="">
             <div class="comment-info">
               <span>{{this.user.name }}</span>
               <br/>
@@ -84,7 +84,7 @@
 {{#if user.isAdmin}}
   <div class="admin-course-add-lecture row">
     <label>Lecture Name
-      <input type="text" class="lecture-name"/>
+      <input type="text" class="admin-add-lecture-name"/>
     </label>
     <label>Lecture Date
       <input type="date" class="lecture-date">

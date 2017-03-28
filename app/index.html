@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Project Katana</title>
 
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
 
   <!-- build:css styles/vendor.css -->
@@ -26,12 +25,15 @@
   <link rel="stylesheet" href="styles/login.css">
   <link rel="stylesheet" href="styles/user-settings.css">
   <!--chart styles-->
-  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
   <!--chart styles end-->
   <!--Robot font from google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <!--end of font-->
   <!-- endbuild -->
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+
 
 </head>
 <body>
@@ -95,6 +97,7 @@
 <script src="/bower_components/moment/moment.js"></script>
 <script src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
 <script src="/bower_components/toastr/toastr.js"></script>
+<script src="/bower_components/amcharts3/amcharts/amcharts.js"></script>
 <!-- endbower -->
 <script src="/bower_components/handlebars-intl/dist/handlebars-intl.js"></script>
 <!-- endbuild -->
@@ -111,12 +114,13 @@
 <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
 <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
 <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+
+<!-- endbuild -->
+
 <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
 <script src="https://www.amcharts.com/lib/3/serial.js"></script>
 <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
 <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-
-<!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
 <script src="scripts/utils/constants.js"></script>

@@ -5,9 +5,9 @@
 
   <testsuite name="index"
     errors="0" failures="1" hostname="" id="" package="index" skipped="0"
-    tests="4" time="24.04" timestamp="Mon, 27 Mar 2017 12:23:58 GMT">
+    tests="4" time="22.52" timestamp="Tue, 28 Mar 2017 08:44:04 GMT">
   
-    <testcase name="Login page shows login form" classname="index" time="4.187" assertions="5">
+    <testcase name="Login page shows login form" classname="index" time="4.212" assertions="5">
 
     
 
@@ -19,41 +19,15 @@
 
     
     </testcase>
-      <system-err>
-        ERROR: Unable to locate element: &quot;button#user-create-user-btn&quot; using: css selector
-    at command (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\api\assertions\visible.js:42:21)
-    at module.exports.BaseAssertion._scheduleAssertion (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:87:17)
-    at module.exports.BaseAssertion._executeCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:82:17)
-    at AssertionInstance.commandFn [as _commandFn] (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:180:21)
-    at AsyncTree.runCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:154:30)
-    at AsyncTree.runChildNode (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:114:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:80:10)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:90:12)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-      </system-err>
   
-    <testcase name="Login submit return valid message after invalid username is entered" classname="index" time="6.732" assertions="2">
+    <testcase name="Login submit return valid message after invalid username is entered" classname="index" time="5.849" assertions="2">
 
     
 
     
     </testcase>
-      <system-err>
-        ERROR: Unable to locate element: &quot;button#user-create-user-btn&quot; using: css selector
-    at command (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\api\assertions\visible.js:42:21)
-    at module.exports.BaseAssertion._scheduleAssertion (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:87:17)
-    at module.exports.BaseAssertion._executeCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:82:17)
-    at AssertionInstance.commandFn [as _commandFn] (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:180:21)
-    at AsyncTree.runCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:154:30)
-    at AsyncTree.runChildNode (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:114:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:80:10)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:90:12)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-      </system-err>
   
-    <testcase name="Login submit return valid message after invalid password is entered" classname="index" time="6.142" assertions="3">
+    <testcase name="Login submit return valid message after invalid password is entered" classname="index" time="5.719" assertions="3">
 
     
 
@@ -61,40 +35,14 @@
 
     
     </testcase>
-      <system-err>
-        ERROR: Unable to locate element: &quot;button#user-create-user-btn&quot; using: css selector
-    at command (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\api\assertions\visible.js:42:21)
-    at module.exports.BaseAssertion._scheduleAssertion (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:87:17)
-    at module.exports.BaseAssertion._executeCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:82:17)
-    at AssertionInstance.commandFn [as _commandFn] (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:180:21)
-    at AsyncTree.runCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:154:30)
-    at AsyncTree.runChildNode (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:114:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:80:10)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:90:12)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-      </system-err>
   
-    <testcase name="Login submit redirects to user-panel page when correct username and password are entered" classname="index" time="6.978" assertions="2">
+    <testcase name="Login submit redirects to user-panel page when correct username and password are entered" classname="index" time="6.739" assertions="2">
 
       <failure message="Testing if the URL contains &quot;user-panel&quot;.">    at Object.Login submit redirects to user-panel page when correct username and password are entered (D:\Telerik\06.Front-End\Final Project\Client\tests\login-tests.js:50:15)
     at _combinedTickCallback (internal/process/next_tick.js:67:7)</failure>
 
     
     </testcase>
-      <system-err>
-        ERROR: Unable to locate element: &quot;button#user-create-user-btn&quot; using: css selector
-    at command (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\api\assertions\visible.js:42:21)
-    at module.exports.BaseAssertion._scheduleAssertion (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:87:17)
-    at module.exports.BaseAssertion._executeCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:82:17)
-    at AssertionInstance.commandFn [as _commandFn] (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\assertion.js:180:21)
-    at AsyncTree.runCommand (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:154:30)
-    at AsyncTree.runChildNode (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:114:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:80:10)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-    at AsyncTree.walkDown (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:90:12)
-    at AsyncTree.walkUp (C:\Users\Ayyavazhi\AppData\Roaming\npm\node_modules\nightwatch\lib\core\queue.js:97:8)
-      </system-err>
   
   
   </testsuite>

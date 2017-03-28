@@ -68,8 +68,8 @@ gulp.task('html', ['styles', 'scripts'], () => {
       processConditionalComments: true,
       removeComments: true,
       removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
+      removeScriptTypeAttributes: false,
+      removeStyleLinkTypeAttributes: false
     })))
     .pipe(gulp.dest('dist'));
 });

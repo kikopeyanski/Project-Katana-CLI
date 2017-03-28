@@ -1,6 +1,6 @@
 require('nightwatch/bin/runner.js');
 
-let clientLoginPageUrl = 'http://localhost:9000/#/login';
+let clientLoginPageUrl = 'https://kikopeyanski.github.io/Project-Katana/#/login';
 let invalidUsername = 'Definitely an invalid username';
 let validUsername = 'kikopeyanski';
 let invalidPassword = 'inv';

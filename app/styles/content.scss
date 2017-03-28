@@ -58,7 +58,7 @@
       .course-info {
         flex-basis: 70%;
         position: relative;
-        padding: 20px;
+        padding: 20px 10px 20px 20px;
         height: 40%;
 
         .course-color-circle {
@@ -138,6 +138,7 @@
   }
   .latest-notifications {
     flex-basis: 50%;
+    max-height:50%;
     padding: 0px 10px 10px;
 
     .all-notifications {

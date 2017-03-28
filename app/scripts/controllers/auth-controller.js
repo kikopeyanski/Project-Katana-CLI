@@ -12,7 +12,6 @@ let authController = {
             //magic...
             user.isAdmin = user.roles.indexOf('admin') !== -1;
             user.notificationCount = user.notifications.length;
-            console.log(user);
             views.get('nav-home')
               .then(template => {
                 let templateFunc = handlebars.compile(template);
@@ -31,7 +30,7 @@ let authController = {
                 $('.sidebar').html(html);
 
                 $('.button-completed').on('click', function () {
-                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/user-panel';
+                  window.location.href = './#/user-panel';
                   $('#sidebar-wrapper button').each(function () {
                     $(this).removeClass('selected');
                   });
@@ -39,7 +38,7 @@ let authController = {
                 });
 
                 $('.button-pending').on('click', function () {
-                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/courses/all';
+                  window.location = './#/courses/all';
                   $('#sidebar-wrapper button').each(function () {
                     $(this).removeClass('selected');
                   });
@@ -47,14 +46,14 @@ let authController = {
                 });
 
                 $('.button-calendar').on('click', function () {
-                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/user-calendar';
+                  window.location = './#/user-calendar';
                   $('#sidebar-wrapper button').each(function () {
                     $(this).removeClass('selected');
                   });
                   $(this).addClass('selected');
                 });
                 $('.button-logout').on('click', function () {
-                  window.location = 'https://kikopeyanski.github.io/Project-Katana/#/logout';
+                  window.location = './#/logout';
                   $('.sidebar').css('display', 'none');
 
                 })
@@ -72,7 +71,7 @@ let authController = {
                 eventHandler.navbarHide();
 
                 $('.sidebar').css('display', 'none');
-                window.location.replace('#/login');
+                window.location = './#/login';
               });
 
           })

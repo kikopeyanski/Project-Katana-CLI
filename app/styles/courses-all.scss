@@ -8,21 +8,25 @@
   .content-courses {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     height: 100%;
     align-items: flex-start;
     align-content: flex-start;
 
     .courses-first-module, .courses-second-module {
+      width: 50%;
       flex-basis: 50%;
     }
     .courses-first-module {
       order: 1;
     }
     .courses-second-module {
-      order: 3;
+      order: 2;
     }
     .courses-third-module {
-      order: 2;
+      order: 3;
+      align-content: flex-start;
+      width: 50%;
       flex: 50%;
     }
 
@@ -30,7 +34,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
-      align-content: stretch;
+      align-content: flex-start;
 
       .course {
         flex-basis: 40%;
@@ -53,6 +57,7 @@
           position: relative;
 
           .course-active-notification{
+            z-index: 1700;
             opacity: 0;
             width: 100px;
             text-align: center;
@@ -124,7 +129,9 @@
 @media (min-device-width: 320px) and (max-device-width: 640px) {
   .content-courses-all-wrapper .content-courses{
     flex-wrap: wrap;
+    flex-direction: row;
     .course-module{
+      width: 100%;
       flex-basis: 100%;
       justify-content: center;
     }

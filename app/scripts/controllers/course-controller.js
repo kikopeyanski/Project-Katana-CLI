@@ -11,7 +11,6 @@ let courseController = {
         animation.start();
         dataService.getAllCourses()
           .then(response => {
-            console.log(response);
             courses = response;
             return views.get('courses-all')
           })
@@ -109,7 +108,7 @@ let courseController = {
                     });
                     $('.lecture-create-lecture-btn').on('click', function () {
                       let lecture = {
-                        name: $('.lecture-name').val(),
+                        name: $('.admin-add-lecture-name').val(),
                         date: $('.lecture-date').val(),
                         startHour: $('.lecture-startHour').val(),
                         endHour: $('.lecture-endHour').val(),
@@ -121,10 +120,15 @@ let courseController = {
 
                       dataService.addLectureToCourse(id, lecture)
                         .then(() => {
-                            console.log('succes')
-                          }
-                        )
-                    })
+                          console.log('succes')
+                        })
+                        .then(() => {
+                          console.log(lecture);
+                        })
+                        .catch((err) => {
+                          console.log(err)
+                        })
+                    });
                     $('#form-new-comment').submit(function (ev) {
                         ev.preventDefault();
                         if ($(this).find('textarea').val()) {
@@ -139,7 +143,7 @@ let courseController = {
                                   let html = templateFunc(comment);
 
                                   $('.comments-all').append(html);
-                                  comments.animate({scrollTop:$(comments)[0].scrollHeight},500,function () {
+                                  comments.animate({scrollTop: $(comments)[0].scrollHeight}, 500, function () {
 
                                   })
                                 });

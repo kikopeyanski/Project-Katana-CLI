@@ -74,7 +74,7 @@ let eventHandler = {
           actionRegister(data)
             .then((response) => {
               animation.stop();
-              window.location.replace('Project-Katana/#/login');
+              window.location= './#/login';
               toastr['success'](response.message);
             })
             .catch((err) => {
@@ -122,7 +122,7 @@ let eventHandler = {
         searchBar.focus();
       });
       searchBar.on('input', function (ev) {
-        window.location = 'https://kikopeyanski.github.io/Project-Katana/#/courses/all';
+        window.location ='./#/courses/all';
         $('.course').each(function () {
           let courseData = $(this).find('.course-info').find('a').html().toLowerCase().indexOf(searchBar.val().toLowerCase());
           if (courseData !== -1

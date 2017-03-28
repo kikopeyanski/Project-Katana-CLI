@@ -207,7 +207,11 @@
 
       display: none;
     }
-
+    .navbar-search-wrapper {
+      input#search-value {
+        width: 60%;
+      }
+    }
   }
 
 }
